@@ -1,0 +1,87 @@
+	
+	* { border: 0 none; 	margin: 0; outline: medium none; padding: 0; }	
+	a { text-decoration:none; }
+	table.golfreview { background-color:#ccc;}
+	table.golfreview th { padding:3px 6px;background-color:#f9f9f9;}
+	table.golfreview td {padding:3px 6px;background-color:#fff;}
+	table.golfreview .gr {	background-color:#dff8dd;}
+	table.golfreview .gry {background-color:#ebf7ff;}
+	span.sm {font-size:.8em;}
+	table.menudesc { border-spacing: 0px; border: solid #E4E4E4 1px; border-radius: 6px 6px 6px 6px;}
+	table.menudesc #text { padding:10px;}
+	table.menudesc th.tdclr { font-size: 13px; background-color: #E4E4E4; border-radius: 6px 6px 0px 0px;}
+	select { width:220px; }
+	
+	#header { height:72px; background:url('images/header-bg.png') top left repeat-x; border-left:1px solid #d3d3d3; border-right:1px solid #d3d3d3; }
+	.header_sub_menu_sample { height:72px; background:url('images/header-bg.png') top left repeat-x; border-left:1px solid #d3d3d3; border-right:1px solid #d3d3d3; }
+	
+	/** * 4.2 Navigation - Kamran	 * ------------------------- */
+	/* Horizontal Submenu Visible CSS */
+
+	.reviewAppOO7-main-navigation, .main-navigation { float:left; width:806px; background:url('images/topnav-bg.png') top left no-repeat; height:35px; }
+	#reviewAppOO7-navigation, #navigation { float:left;}
+	.search_box {  float:right; width: 184px; height:30px; margin-right: 19px; background:url('images/search-bg.png') right 4px no-repeat; }
+	.search_box input { background:transparent; width:170px; height:25px; padding:2px 0 0 30px; margin:3px 0 0 0px; border: none; }
+	.nav-menu { position: relative; }
+	.nav-menu  li{ display: inline-block; position: relative; margin: 9px 10px; }
+	.nav-menu li a { font-size:16px;  padding:9px 0px; color:#d9dbbe; text-transform:uppercase; }
+	li.current-menu-parent a, li.current-menu-item a, .nav-menu li a:hover  { padding-top:7.5px; color:#fff; background:url('images/topnav-cur.png') top center no-repeat; }
+	/* hide submenu by default */
+	.sub-menu { display: none; }
+	/* style sub-menu */ 
+	.sub-menu { position: absolute; left:0;	width: 806px; height:30px; padding: 0px 0 0 0; margin:23px 0 0 0px; }
+	/* basic styling of sub-menu list item */ 
+	.sub-menu li  { display: table-cell; color: #006500; font-size: 14px; padding: 12px 5px 0 0; margin: 10px 1px; }
+	.sub-menu li a { font-size:14px; padding:2px 5px; color:#006500; background:none; border-top:1px solid transparent; border-bottom:1px solid transparent; }
+	.sub-menu li a:hover, .sub-menu li.current-menu-item  a { -moz-border-radius:4px;	-webkit-border-radius:4px; border-radius:4px; border-top:1px solid #4a4c2c; border-bottom:1px solid #efefe3; background-color:#a9ae64; color:#fff; background-image:none; padding: 2px 5px;}
+	/* Code for showing/hiding sub-menus on hover and click */
+	/*show sub menus when hover over parent*/ 
+	.nav-menu li.menu-item:hover .sub-menu, .nav-menu li.menu-parent:hover .sub-menu { visibility: visible; display: inline-block; }
+	/* show sub-menus when clicked on(they become current menu item)  */
+	.current-menu-item .sub-menu, .current-menu-parent .sub-menu { visibility: visible; display: inline-block; }
+	/*hide the active menu on hover over other items to make for better transitions*/ 
+	.nav-menu:hover li.current-menu-item .sub-menu, .nav-menu:hover li.current-menu-parent .sub-menu { visibility: hidden; display: none; }
+	/*now the current menu does not show on hover on itself, so tell it to show when hover is on it*/ 
+	.nav-menu li.current-menu-item:hover .sub-menu, .nav-menu li.current-menu-parent:hover .sub-menu { visibility: visible; display: inline-block; } 
+		
+	.wrap h2.tab { height:43px; margin:0 0 0 0; }
+	.wrap h2{ border-bottom: 1px solid #CCCCCC; padding-bottom: 0; }
+	.wrap h3 { margin:13px 0 10px 0px;}	
+	.nav-wrap-tab .nav-tab {  border-radius:5px 5px 0px 0px; margin-left:0px; margin-right:6px; }
+	.nav-wrap-tab .nav-tab-active { background-color:#fff; }
+	#PMainShowNodeLevel { width: 200px; }
+	
+	
+	table #promo-queue, table #promo-queue tr, table #promo-queue td, table #promo-queue tbody, select.pqueue { margin:0px; padding:0px; width:50px; }
+		
+	/* ----------------MASK - Standard For All-----------------------------*/
+		
+	#mask { position:absolute; left:0; top:0; z-index:9000; background-color:#FFF; display:none; }
+	#boxes #HeaderBox { margin-top:-9px; width:100%; line-height:30px ; font-weight:bold; }
+	#boxes #HeaderBox img { margin:7px 0px 0 8px; }
+
+	/* ------------- Forgot Password Window And Dialog ------------------*/
+		
+	#boxes .Menu_Gradient_Window{ position:fixed; left:0; top:0; width:470px; height:200px; display:none;z-index:9999; border-radius:4px;}
+	#boxes #Menu_Gradient_Dialog{ border:1px solid #CED8F6; width:330px; height:290px;  margin:0; padding:10px;   background-color:#C3DAF9;}
+	#boxes #Menu_Gradient_Dialog img { margin-left: 200px;}
+	#boxes form { margin:0; padding:0;}
+	#boxes #frmDialogBoxGradient { margin:0px 1px 0px -6px; width:342px; height:273px; background-color:#FFF; border-bottom-right-radius:3px; border-bottom-left-radius:3px;}
+
+	.sample-site-navigation{ width:350px; border-radius:5px 5px 5px 5px;}
+	ul.sub-menu-sample { left: 0; width: 300px; margin: 0px 0 0px 0; padding: 7px 0 3px 0;}
+	ul.sub-menu-sample li { display: inline; padding: 12px 5px 0 0; margin: 10px 1px;}
+	ul.sub-menu-sample li a { font-size:14px; padding:2px 5px; color:#006500; background:none; border-top:1px solid transparent; border-bottom:1px solid transparent;}
+	ul.sub-menu-sample li a:hover, ul.sub-menu-sample li.active a { background:none; -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px; border-top:1px solid #4a4c2c; border-bottom:1px solid #efefe3; background-color:#a9ae64; color:#fff;}
+	.header_sub_menu_sample { width:350px; height: 30px; }
+	h2 .nav-tab { font: italic 20px/30px Georgia,"Times New Roman","Bitstream Charter",Times,serif; padding: 6px 10px 6px; }
+		
+	/* ------------- Titles & Articles ------------------*/
+	
+	.text-header { border-top-left-radius:5px; border-top-right-radius:5px; height:24px; padding:10px 0 0 0px; width:350px;  background: url("images/content-header-green.png") no-repeat scroll left top transparent;}
+	.text-header h3 { color: #FFFFFF; font-weight:bold; text-transform: uppercase; margin: -4px 0 0 15px; padding:0; border:0; outline:none; line-height: 1.4em; font-family: Verdana,sans-serif; font-size:13px;}
+	.title { font-size: 18px; margin-bottom: 3px;}
+	.title a, .title a:visited, a.arrow-right { color: #137211; text-decoration: none; }
+	.arrow-right { background: url("images/arrow-right.png") no-repeat scroll right top transparent; display: inline-block; height: 15px; padding-right: 20px;}		
+	#footer-separator { background:url('images/bottom-border-green.png') top left repeat-x; width:350px; height:20px; margin:0px; padding:0px; position:relative;}
+	.featured-golf-deals-sample, .best-golf-clubs-sample { padding:10px 2px; background-color:#efefd8; text-align:center; font-weight:bold;}

@@ -1,0 +1,43 @@
+location ~ /(.+)/brand/(.+)\.html$ {
+    rewrite ^(.+)$ /wp-content/themes/site/site_brand_page.php?$args last;
+  }
+
+location ~ /(PLACEHOLDER_NAME__LOCATION|PLACEHOLDER_NAME__CATEGORY)/([a-zA-Z0-9_\-]+)/([a-zA-Z0-9_\-\.]+)/([a-zA-Z0-9_\-]+)-review\.html$ {
+	rewrite ^(.+)$ /wp-content/themes/site/site_product_review.php?args last;
+}
+
+location ~ /(PLACEHOLDER_NAME__CATEGORY)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)\.html$ {
+       rewrite ^(.+)$ /wp-content/themes/site/site_product_page.php?$args last;
+}
+
+location ~ /(PLACEHOLDER_NAME__CATEGORY)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9\-]+)\.html$ {
+      rewrite ^(.+)$ /wp-content/themes/site/site_brand_category_page.php?$args last;
+ }
+
+  location ~ /(PLACEHOLDER_NAME__CATEGORY)/([a-zA-Z0-9_-]+)-subcat\.html$ {
+        rewrite ^(.+)$ /wp-content/themes/site/page-sub-category-subpage_others.php?$args last;
+  }
+
+location ~ /(PLACEHOLDER_NAME__LOCATION)/([a-zA-Z0-9_\-]+)/([a-zA-Z0-9_\-]+)/([a-zA-Z0-9_\-\.]+)/([a-zA-Z0-9_\-]+)-review\.html$ {
+	rewrite ^(.+)$ /wp-content/themes/site/site_location_review.php?args last;
+}
+
+location ~ /PLACEHOLDER_NAME__LOCATION/([a-zA-Z\-]+)/([a-zA-Z\-]+)/([a-zA-Z0-9_\-\.]+)/([a-zA-Z0-9_\-]+)\.html$ {
+	rewrite ^(.+)$ /wp-content/themes/site/site_location_page.php?$args last;
+}
+
+location ~ /PLACEHOLDER_NAME__LOCATION/([a-zA-Z\-]+)/([a-zA-Z0-9_\-]+)\.html$ {
+	rewrite ^(.+)$ /wp-content/themes/site/site_location_state.php?$args last;
+}
+
+location ~ /PLACEHOLDER_NAME__LOCATION/([a-zA-Z\-]+)/([a-zA-Z0-9_\-]+)/([a-zA-Z0-9_\-]+)\.html$ {
+	rewrite ^(.+)$ /wp-content/themes/site/site_location_listing.php?$args last;
+}
+
+location ~ /hotdeals/([a-zA-Z0-9_\-]+)\.html$ {
+	rewrite ^(.+)$ /wp-content/themes/site/page-site-cat-deals.php?$args last;
+}
+location ~ /brands/([a-zA-Z0-9_.\-]+)\.html$ {
+        rewrite ^(.+)$ /wp-content/themes/site/site-brand-cat-page.php?$args last;
+}
+

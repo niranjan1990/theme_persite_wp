@@ -1,0 +1,96 @@
+<?php 
+global $age;
+error_reporting(E_ALL);
+include "wp-config.php";
+$dbHost = 'localhost';
+$dbUsername = 'root';
+$dbPassword = '';
+$dbName = 'golf_venice_new_feb_ver1';
+
+//LET'S INITIATE CONNECT TO DB
+//CREATE QUERY TO DB AND PUT RECEIVED DATA INTO ASSOCIATIVE ARRAY
+$db = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
+mysqli_set_charset($db,"utf8");
+
+//if (isset($_REQUEST['query'])) {
+    $out = $_REQUEST['query'];
+	$trailsorbike = $_REQUEST['trailsorbike'];
+	
+
+
+
+
+
+
+
+
+
+
+
+$url = $out;
+$term = array("brand: ", "Brand: ", "BRAND: ");
+
+if (preg_match('#Brand:#i', $url) === 1) 
+{
+		$trailsorbike1 = str_replace($term,"",$url);
+			
+
+		
+			$query = $db->query("select p.url_safe_product_name,p.productid,p.product_name,p.categoryid,p.manufacturerid,p.channelid,c.categoryid,c.category_name,c.url_safe_category_name,cc.categoryid,cc.category_path,m.manufacturerid,m.manufacturer_name,m.url_safe_manufacturer_name from products p left join categories c on p.categoryid=c.categoryid left join channel_categories cc on p.categoryid=cc.categoryid left join manufacturers m on p.manufacturerid=m.manufacturerid WHERE m.manufacturer_name LIKE '%{$trailsorbike1}%' limit 100");
+			
+		$array = array();
+			while ($row = $query->fetch_assoc()) {
+			$final[] = array (
+				'label' => $row['manufacturer_name'],
+				'value' =>  "Brand: ".$row['url_safe_manufacturer_name'],
+			);
+		}
+
+}
+else
+{
+	
+	if (array_key_exists($trailsorbike, $age)) {
+		$trailsorbike = $age[$trailsorbike];
+	}
+	else
+	{
+		$trailsorbike = $_REQUEST['trailsorbike'];
+	}
+
+		
+		if($trailsorbike=='golf-courses')
+		
+		{
+					$query = $db->query("select p.url_safe_product_name,p.productid,p.product_name,p.categoryid,p.manufacturerid,p.channelid,c.categoryid,c.category_name,c.url_safe_category_name,cc.categoryid,cc.category_path,m.manufacturerid,m.manufacturer_name,m.url_safe_manufacturer_name from products p left join categories c on p.categoryid=c.categoryid left join channel_categories cc on p.categoryid=cc.categoryid left join manufacturers m on p.manufacturerid=m.manufacturerid WHERE p.channelid ='82' and p.product_name LIKE '%{$out}%' and m.url_safe_manufacturer_name LIKE '%golf%' order by product_name limit 100");
+			
+				$array = array();
+					while ($row = $query->fetch_assoc()) {
+					$final[] = array (
+						'label' => $row['product_name'],
+						'value' =>  $row['product_name'],
+					);
+				}		}
+		else
+		{
+				//$channelid=7;
+					$query = $db->query("select p.url_safe_product_name,p.productid,p.product_name,p.categoryid,p.manufacturerid,p.channelid,c.categoryid,c.category_name,c.url_safe_category_name,cc.categoryid,cc.category_path,m.manufacturerid,m.manufacturer_name,m.url_safe_manufacturer_name from products p left join categories c on p.categoryid=c.categoryid left join channel_categories cc on p.categoryid=cc.categoryid left join manufacturers m on p.manufacturerid=m.manufacturerid WHERE p.channelid ='7' and p.product_name LIKE '%{$out}%'  and cc.category_path LIKE '%{$trailsorbike}%' order by product_name limit 100");
+			
+				$array = array();
+					while ($row = $query->fetch_assoc()) 
+					{
+					$final[] = array (
+						'label' => $row['product_name'],
+						'value' =>  $row['product_name'],
+					);
+					}
+		}
+		
+		
+	
+}
+    //RETURN JSON ARRAY
+    echo json_encode ($final);
+//}
+
+?>

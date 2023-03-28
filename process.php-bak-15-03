@@ -1,0 +1,52 @@
+<?php
+include "wp-config.php";
+	mysql_connect("localhost",'root','');
+	mysql_select_db('venice_mtbr');
+
+	
+	if($_POST['brandurl']!=''){
+		$qry = mysql_query("select p.categoryid,p.Url_Safe_Product_Name,c.categoryid,c.url_safe_category_name  from products p left join categories c on p.categoryid=c.categoryid where p.Url_Safe_Product_Name='".$_POST['cate']."'");
+		
+		
+		
+		$row = mysql_fetch_array($qry);
+		$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+		$find=explode("/",$actual_link);
+		if($find[4]==''){
+			$pieces = explode(".html",$actual_link);
+			//print_r($pieces);
+		}else{
+			$pieces = explode(".html",$actual_link);
+			$parts = explode('/', $pieces[0]);
+			$last = array_pop($parts);
+			$pieces = array(implode('/', $parts), $last);
+			//print_r($pieces);
+		}
+		
+		$url = 'http://mtbr.owshi.com/bikes'.'/'.$_POST['brands'].'/'.$row['url_safe_category_name'].'/'.$_POST['cate'].'.html';
+
+	}
+	else{
+		$qry = mysql_query("select p.categoryid,p.Url_Safe_Product_Name,p.manufacturerid,c.categoryid,c.url_safe_category_name,m.manufacturerid,url_safe_manufacturer_name from products p left join categories c on p.categoryid=c.categoryid left join manufacturers m on p.manufacturerid=m.manufacturerid where p.Url_Safe_Product_Name='".$_POST['searchkey']."'");	
+		
+		$row = mysql_fetch_array($qry);
+		
+			$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+		$find=explode("/",$actual_link);
+		if($find[4]==''){
+			$pieces = explode(".html",$actual_link);
+		}else{
+			$pieces = explode(".html",$actual_link);
+			$parts = explode('/', $pieces[0]);
+			$last = array_pop($parts);
+			$pieces = array(implode('/', $parts), $last);
+			//print_r($pieces);
+		}		
+		
+		
+		
+		$url = 'http://mtbr.owshi.com/bikes'.'/'.$row['url_safe_manufacturer_name'].'/'.$row['url_safe_category_name'].'/'.$_POST['searchkey'].'.html';
+	}	
+		//header("Location: ".$url);
+		//$button="<button href=".$url.">";	
+		echo $url;

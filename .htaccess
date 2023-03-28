@@ -1,0 +1,87 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+
+#Site brand page
+#RewriteCond %{REQUEST_URI} !(golf-clubs|golf-courses|golf-deals|reviews|golf-equipment|site-location-search)\.html$
+#RewriteRule ^([a-zA-Z0-9_-]+)\.html$ /wp-content/themes/site/site_brand_page.php [L]
+
+#Site Brand Page
+RewriteCond %{REQUEST_URI} (golf-clubs|golf-equipment|cameras)/(brand)/([a-zA-Z0-9_-]+)\.html$
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)\.html$ /wp-content/themes/site/site_brand_page.php [L]
+
+#Site Brand/Category Page
+#RewriteCond %{REQUEST_URI} !(golf-clubs|golf-courses|golf-deals|reviews|golf-equipment|site-location-search)/([a-zA-Z0-9_-]+)\.html$
+#RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)\.html$ /wp-content/themes/site/site_brand_category_page.php [L]
+
+#Site Trails Brand/Category Page
+RewriteCond %{REQUEST_URI} !(trails|golf-courses|golf-deals|reviews|site-location-search)/([a-zA-Z0-9_-]+)\.html$
+RewriteRule ^(golf-clubs|golf-equipment|cameras)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)\.html$ /wp-content/themes/site/site_brand_category_page.php [L]
+
+#Site Location/State
+RewriteCond %{REQUEST_URI} /golf-courses/([A-Z]{1})([a-zA-Z\-]+)\.html$ [OR]
+RewriteCond %{REQUEST_URI} /golf-courses/(public-golf-courses|best-golf-courses|driving-ranges)/([A-Z]{1}[a-zA-Z\-]+)\.html$
+RewriteRule ^(.*)$ /wp-content/themes/site/site_location_state.php [L]
+
+
+#Zaved Trails Added.
+#Site Trails/State
+RewriteCond %{REQUEST_URI} /trails/([A-Z]{1})([a-zA-Z\-]+)\.html$ [OR]
+RewriteCond %{REQUEST_URI} /trails/(public-golf-courses|best-golf-courses|driving-ranges)/([A-Z]{1}[a-zA-Z\-]+)\.html$
+RewriteRule ^(.*)$ /wp-content/themes/site/site_location_state.php [L]
+
+#Zaved Added.
+#Site Trails/State/City-Zip
+
+RewriteCond %{REQUEST_URI} /trails/([A-Z]{1}[a-zA-Z\-]+)/([a-zA-Z0-9_\-\.]+)\.html$ [OR]
+RewriteCond %{REQUEST_URI} /trails/([0-9]+)\.html$ [OR]
+RewriteCond %{REQUEST_URI} /trails/(public-golf-courses|best-golf-courses|driving-ranges)/([A-Z]{1}[a-zA-Z\-]+)/([a-zA-Z0-9_\.]+)\.html$ [OR]
+RewriteCond %{REQUEST_URI} /trails/(public-golf-courses|best-golf-courses|driving-ranges)/([0-9]+)\.html$
+RewriteRule ^(.*)$ /wp-content/themes/site/site_location_listing.php [L]
+
+#Site Location/State/City-Zip
+RewriteCond %{REQUEST_URI} /golf-courses/([A-Z]{1}[a-zA-Z\-]+)/([a-zA-Z0-9_\-\.]+)\.html$ [OR]
+RewriteCond %{REQUEST_URI} /golf-courses/([0-9]+)\.html$ [OR]
+RewriteCond %{REQUEST_URI} /golf-courses/(public-golf-courses|best-golf-courses|driving-ranges)/([A-Z]{1}[a-zA-Z\-]+)/([a-zA-Z0-9_\.]+)\.html$ [OR]
+RewriteCond %{REQUEST_URI} /golf-courses/(public-golf-courses|best-golf-courses|driving-ranges)/([0-9]+)\.html$
+RewriteRule ^(.*)$ /wp-content/themes/site/site_location_listing.php [L]
+
+#Site Location - Location Review
+RewriteRule ^golf-courses/([A-Z]{1}[a-zA-Z\-]+)/([a-zA-Z0-9_\-\.]+)/([a-zA-Z0-9_\-]+)-review\.html$ /wp-content/themes/site/site_product_review.php [L]
+
+#Site /Location/State/City/Location
+RewriteCond %{REQUEST_URI} /golf-courses/([A-Z]{1}[a-zA-Z\-]+)/([a-zA-Z0-9_\-\.]+)/([a-zA-Z0-9_\-]+)\.html$
+RewriteRule ^(.*)$ /wp-content/themes/site/site_location_page.php [L]
+
+#Site Product List Rewrite
+#RewriteRule ^(golf-clubs|golf-equipment)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)\.html$ /wp-content/themes/site/site_product_list.php [L]
+
+#Site Product Review
+RewriteRule ^(golf-clubs|golf-equipment|cameras)/([a-zA-Z0-9_-]+)/([a-z\-]+)/([a-zA-Z0-9_-]+)\-review\.html$ /wp-content/themes/site/site_product_review.php [L]
+
+#Sites product page rewrite
+RewriteRule ^(golf-clubs|golf-equipment|cameras)/([a-zA-Z0-9_-]+)/([a-z\-]+)/([a-zA-Z0-9_-]+)\.html$ /wp-content/themes/site/site_product_page.php [L]
+
+#Adhoc page for conetnt - review_adhoc_page.php
+RewriteCond %{REQUEST_URI} /(reviews)/([a-zA-Z0-9_-]+)\.html$ [OR]
+RewriteCond %{REQUEST_URI} /(reviews)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)\.html$ [OR]
+RewriteCond %{REQUEST_URI} /(reviews)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-z\-]+)\.html$ [OR]
+RewriteCond %{REQUEST_URI} /(reviews)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-z\-]+)/([a-zA-Z0-9_-]+)\.html$ 
+RewriteRule ^(.*)$ /wp-content/themes/site/review_adhoc_page.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress

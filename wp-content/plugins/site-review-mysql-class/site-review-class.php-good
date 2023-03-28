@@ -1,0 +1,1094 @@
+<?php
+	
+	ini_set('max_execution_time', 300);
+	
+	/**Class for mysql query result**/
+
+	class SiteReviewClass {
+	
+		var $query;
+		var $result;
+		var $db;
+		var $currentpage;
+		var $meta_vars = array();
+		
+		//db params
+		//var $user = "root";
+		//var $pass	= "";
+		//var $mydb	= "golf_venice_new_feb";
+		//var $host	= "localhost";
+		
+		function __construct() {
+			
+			$db = explode("|", get_option('dbconnection') );
+			//$this->db = new wpdb( $this->user, $this->pass, $this->mydb, $this->host );
+			$this->db = new wpdb( $db[0], $db[1], $db[2], $db[3] );
+		}
+		
+		/*** Get product detail page query ****/
+		function get_product_detail( $item, $PSite, $SSite ) {
+			
+			$cat_sql = "";
+			if($item['is_course'] == false) { $cat_sql = "AND c.url_safe_category_name = '{$item['product_category']}' AND m.url_safe_manufacturer_name = '{$item['category']}'"; }
+			$CIds = (  $SSite == "" ) ? $PSite : $PSite.','.$SSite; // Added by Zaved as on 24/Nov/2016
+			
+			/*$this->query = "SELECT a.productid, a.product_name, a.product_description, a.total_reviews, 
+				a.average_rating, a.new_product, a.product_image, a.buy_button_type,
+				a.msrp, a.choice_award, a.hasproreview, a.quickrating_count, a.quickrating_average, 
+				a.combined_average, a.articleid, a.url_safe_product_name, c.category_name, 
+				c.url_safe_category_name, m.manufacturer_name, m.url_safe_manufacturer_name 
+				FROM products a LEFT JOIN categories c ON a.categoryid = c.categoryid 
+				LEFT JOIN manufacturers m ON a.manufacturerid = m.manufacturerid 
+				WHERE a.url_safe_product_name = '$item[product]' $cat_sql 
+				AND a.channelid IN ( $CIds ) AND a.visible = '1'";  // Changed ChannelID 7,82 to String by Zaved as on 16/Nov/2016				
+			//$this->db->show_errors();*/
+			//Mari Removed article id.$cat_sql (important)
+			$this->query = "SELECT a.productid, a.product_name, a.product_description, a.total_reviews, 
+				a.average_rating, a.new_product, a.product_image, a.buy_button_type,
+				a.msrp, a.choice_award, a.hasproreview, a.quickrating_count, a.quickrating_average, 
+				a.combined_average, a.url_safe_product_name, c.category_name, 
+				c.url_safe_category_name, m.manufacturer_name, m.url_safe_manufacturer_name 
+				FROM products a LEFT JOIN categories c ON a.categoryid = c.categoryid 
+				LEFT JOIN manufacturers m ON a.manufacturerid = m.manufacturerid 
+				WHERE a.url_safe_product_name = '$item[product]'  
+				AND a.channelid IN ( $CIds ) AND a.visible = '1'";  // Changed ChannelID 7,82 to String by Zaved as on 16/Nov/2016	
+
+				
+	
+			//$this->db->show_errors();
+			
+			return $this->db->get_row( $this->query, object ); 
+		}
+		
+		function get_product_partner_links($id) {
+		
+			$this->query = "select linkid, productid, categoryid, link_name, use_graphic, tracking_url, link_url, 
+			tagline, graphic, partner_product_text, sale_price, original_price 
+			from partner_links where productid = '$id' and valid = '1' limit 10";
+			
+			//$this->db->show_errors();
+			return $this->db->get_results( $this->query, object );
+		}
+		
+		function get_external_product_ratings($id) {
+		
+			$this->query = "SELECT 	SUM(review_count) as web_score_count, AVG(review_rating) as web_score_rating 
+							FROM products_site_reviews WHERE productid = '$id'";
+							
+			//$this->db->show_errors();
+			return $this->db->get_row( $this->query, object );
+		}
+		
+		/*** Get product media*****/
+	
+		function get_product_media($id) {
+		
+			$this->query = "select mediaid, type, caption, value from product_media where productid = '$id'";
+			//$this->db->show_errors();
+			return $this->db->get_results( $this->query, object );
+		}
+		
+		/*** Get product reviews query****/
+		
+		function get_product_reviews($id, $page, $sort=1) {
+		
+			$sortSql 	= ($sort == 1) ? 'reviewid' : 'overall_rating';
+			$page 		= ($page > 1) ? $page : 1;
+			
+			/*** 10 reviews per page * if page != 1, create sub query to create offset ****/
+			
+			if($page == 1) {
+			
+				$offset_sql = "WHERE productid = '$id'";
+				
+			} else {
+				
+				$offset = $page * 10 - 10;
+				$offset_sql = "WHERE reviewid NOT IN ( Select * From ( SELECT reviewid FROM reviews WHERE productid = '$id' 
+				AND valid = '1' ORDER BY $sortSql DESC Limit $offset ) as productid ) AND productid = '$id'";
+			}
+
+			$this->query = "Select reviewid, model, value_rating, overall_rating, 
+			date_format( date_created,'%b %d, %Y') as date_created, misc_rating1, misc_rating2, 
+			misc_rating3, misc_rating4, performance_rating, visitors_rating, total_visitors, 
+			total_visitor_ratings, customer_service, summary, product_experience, reviewer_experience, 
+			purchase_price, purchased_at, quality, similar_products, vbulletinid, 
+			user_screen_name, vbulletin_database, validated_email From reviews $offset_sql  
+			and valid = '1' order by $sortSql desc Limit 10";
+		
+			//$this->db->show_errors();
+			return $this->db->get_results( $this->query, object );
+		}
+		
+		/**************this need to be changed*************************/
+		
+		function get_category_list($type=0, $psite) {
+			
+			$this->query = "select c.categoryid, c.category_name, c.url_safe_category_name, cc.node_level, 
+			cc.nodeid, cc.category_path, ( select count(*) from products p where p.categoryid = c.categoryid) 
+			as product_count from categories c inner join channel_categories cc on cc.categoryid = c.categoryid 
+			where cc.channelid = '$psite' and cc.node_level > 1 order by nodeid ";
+			
+			//$this->db->show_errors();
+			return $this->db->get_results( $this->query, object );
+		}
+		
+		function get_category_detail( $cat, $psite ) {
+		
+			/* $cat['category'] = $this->category_permalink_to_db($cat['category']); Zaved has commented as on 5Dec2016 */
+			
+			$this->query = "select c.categoryid, c.category_name, c.url_safe_category_name, 
+			(select count(*) from products p where p.categoryid = c.categoryid) as product_count 
+			from categories c where c.channelid = '$psite' and c.url_safe_category_name = '$cat[category]'";
+			
+			//$this->db->show_errors();
+			return $this->db->get_row( $this->query, object );
+		}
+
+
+//mari added product list all
+		function get_product_list1($cat,$catList=array(), $psite) {
+		
+			//$cat['category'] = $this->category_permalink_to_db($cat['category']);
+			
+			if(!empty($catList)) {
+				
+				$cat_sql = "AND c.url_safe_category_name IN ('".implode("','",$catList)."')";
+				$cat_sql_sc = "AND sc.url_safe_category_name IN ('".implode("','",$catList)."')";
+			}
+			else {
+			
+				$cat_sql = "AND c.url_safe_category_name = '{$cat['category']}'";
+				$cat_sql_sc = "AND sc.url_safe_category_name = '{$cat['category']}'";
+			}
+		
+			/*** make sure $page value is 1 or greater ***/
+			$page = ($_GET['pg'] > 1) ? $_GET['pg'] : 1;
+			/**
+			* 50 results per page
+			* if page != 1, create sub query to create offset
+			* subquery only used because this is mssql and does not support LIMIT X,Y
+			* once converted to mysql, the subquery is not needed */
+			
+			/*** query list of products, sort by manufacturer name*/		
+			
+			$this->query = "Select c.url_safe_category_name, p.productid, p.product_name,  p.product_image,
+			p.total_reviews, p.average_rating, p.quickrating_average, p.quickrating_count, 
+			p.url_safe_product_name, m.manufacturer_name, m.url_safe_manufacturer_name, 
+			(select avg(review_rating) from products_site_reviews psr where psr.productid = p.productid) as 
+			web_score_rating, (select sum(review_count) from products_site_reviews psr 
+			where psr.productid = p.productid) as web_score_count from categories c left join products p on 
+			c.categoryid = p.categoryid left join manufacturers m on p.manufacturerid = m.manufacturerid 
+			WHERE c.channelid = '$psite' $cat_sql AND  
+			p.visible = '1' ORDER BY m.manufacturer_name ASC, p.product_name ASC ";
+			
+			echo "Select c.url_safe_category_name, p.productid, p.product_name,  p.product_image,
+			p.total_reviews, p.average_rating, p.quickrating_average, p.quickrating_count, 
+			p.url_safe_product_name, m.manufacturer_name, m.url_safe_manufacturer_name, 
+			(select avg(review_rating) from products_site_reviews psr where psr.productid = p.productid) as 
+			web_score_rating, (select sum(review_count) from products_site_reviews psr 
+			where psr.productid = p.productid) as web_score_count from categories c left join products p on 
+			c.categoryid = p.categoryid left join manufacturers m on p.manufacturerid = m.manufacturerid 
+			WHERE c.channelid = '$psite' $cat_sql AND  
+			p.visible = '1' ORDER BY m.manufacturer_name ASC, p.product_name ASC ";
+		
+			
+			//$this->db->show_errors();
+			return $this->db->get_results( $this->query, object );
+		}
+
+		
+		function get_product_list($cat,$catList=array(), $psite) {
+		
+			//$cat['category'] = $this->category_permalink_to_db($cat['category']);
+			
+			if(!empty($catList)) {
+				
+				$cat_sql = "AND c.url_safe_category_name IN ('".implode("','",$catList)."')";
+				$cat_sql_sc = "AND sc.url_safe_category_name IN ('".implode("','",$catList)."')";
+			}
+			else {
+			
+				$cat_sql = "AND c.url_safe_category_name = '{$cat['category']}'";
+				$cat_sql_sc = "AND sc.url_safe_category_name = '{$cat['category']}'";
+			}
+		
+			/*** make sure $page value is 1 or greater ***/
+			$page = ($_GET['pg'] > 1) ? $_GET['pg'] : 1;
+			/**
+			* 50 results per page
+			* if page != 1, create sub query to create offset
+			* subquery only used because this is mssql and does not support LIMIT X,Y
+			* once converted to mysql, the subquery is not needed */
+			
+			if($page == 1) {
+				
+				$offset_sql = "WHERE c.channelid = '$psite'";
+				$offset 	= 0;
+				
+			} else {
+				
+				$offset 	= $page * 50 - 50;
+				$offset_sql = "WHERE p.productid NOT IN ( 
+								Select * From (
+									Select sp.productid from categories sc 
+									left join products sp on sc.categoryid = sp.categoryid 
+									left join manufacturers sm on sp.manufacturerid = sm.manufacturerid 
+									Where sc.channelid = '$psite' $cat_sql_sc and sp.visible = '1' 
+								order by sm.manufacturer_name asc limit $offset, 50  
+								) as productid 
+						) AND c.channelid = '$psite'";
+			}
+		
+			/*** query list of products, sort by manufacturer name*/		
+			
+			$this->query = "Select c.url_safe_category_name, p.productid, p.product_name,  p.product_image,
+			p.total_reviews, p.average_rating, p.quickrating_average, p.quickrating_count, 
+			p.url_safe_product_name, m.manufacturer_name, m.url_safe_manufacturer_name, 
+			(select avg(review_rating) from products_site_reviews psr where psr.productid = p.productid) as 
+			web_score_rating, (select sum(review_count) from products_site_reviews psr 
+			where psr.productid = p.productid) as web_score_count from categories c left join products p on 
+			c.categoryid = p.categoryid left join manufacturers m on p.manufacturerid = m.manufacturerid 
+			WHERE c.channelid = '$psite' $cat_sql AND  
+			p.visible = '1' ORDER BY m.manufacturer_name ASC, p.product_name ASC limit $offset, 50";
+		
+			
+			//$this->db->show_errors();
+			return $this->db->get_results( $this->query, object );
+		}
+		
+		//Zaved Added as on 07-Dec-2016
+		
+		function GetChannelIDByCat( $cat ){			
+			
+			$this->query = "Select cc.channelid From channel_categories cc Where cc.category_path = '$cat'";
+			return $this->db->get_row( $this->query, object );
+		}
+		
+		function get_node_id( $cat, $PSite ){
+		
+			$this->query = "select cc.nodeid from channel_categories cc where cc.channelid = $PSite and cc.node_level = 2 and cc.category_path = '$cat'";			
+			return $this->db->get_row( $this->query, object );
+		}
+				
+		/**
+		* get_product_brand_list is same as get_product_list, except get products
+		* by brand name and not category
+		*/
+	
+function get_product_brand_list1($brand, $PSite) {
+			
+			
+			
+			/** make sure $page value is 1 or greater */
+			//$page = (is_numeric($brand['page'])) ? $brand['page'] : 1;
+		
+			$page = (is_numeric($_GET['page']) && $_GET['page'] > 1) ? $_GET['page'] : 1;
+			/**
+			* 50 results per page
+			* if page != 1, create sub query to create offset
+			* subquery only used because this is mssql and does not support LIMIT X,Y
+			* once converted to mysql, the subquery is not needed
+			*/
+		
+				
+				$url = explode( '/', $_SERVER['REQUEST_URI']);
+				$row = $this->get_node_id($url[1], $PSite );
+				
+				$this->query = "Select c.url_safe_category_name, c.category_name, p.productid, p.product_name, p.product_image, p.total_reviews, 
+				p.average_rating, p.quickrating_average, p.quickrating_count, p.url_safe_product_name, m.manufacturer_name, m.url_safe_manufacturer_name, 
+				(select avg(review_rating) from products_site_reviews psr where psr.productid = p.productid) as web_score_rating, 
+				(select sum(review_count) from products_site_reviews psr where psr.productid = p.productid) as web_score_count 
+				from products p, categories c, manufacturers m, channel_categories cc WHERE 
+				cc.categoryid = c.categoryid and p.manufacturerid = m.manufacturerid and c.categoryid = p.categoryid and 
+				c.channelid = '$PSite' and cc.node_level = 3 and cc.nodeid like '".$row->nodeid."%' and m.url_safe_manufacturer_name = '$brand[brand]' and 
+				p.visible = '1' order by p.product_name asc ";
+				
+								
+				
+			//$this->db->show_errors();
+			return $this->db->get_results( $this->query, object );
+		}
+	
+		function get_product_brand_list($brand, $PSite) {
+			
+			
+			/** make sure $page value is 1 or greater */
+			//$page = (is_numeric($brand['page'])) ? $brand['page'] : 1;
+		
+			$page = (is_numeric($_GET['page']) && $_GET['page'] > 1) ? $_GET['page'] : 1;
+			/**
+			* 50 results per page
+			* if page != 1, create sub query to create offset
+			* subquery only used because this is mssql and does not support LIMIT X,Y
+			* once converted to mysql, the subquery is not needed
+			*/
+			if($page == 1) {
+				
+				//$offset_sql = "WHERE c.channelid = '7'";
+				$offset_sql = " Limit 0, 50";
+				
+			} else {
+				
+				$offset = $page * 50 - 50;
+				$offset_sql = "Limit $offset, 50";				
+				
+				/*$offset_sql = "WHERE p.productid NOT IN (
+					Select * From (
+					Select sp.productid from products sp 
+					left join categories sc on sc.categoryid = sp.categoryid 
+					left join manufacturers sm on sp.manufacturerid = sm.manufacturerid 
+					where sc.channelid = '7' and sm.url_safe_manufacturer_name = '$brand[brand]' 
+					and sp.visible = '1' order by sp.product_name asc Limit $offset ) as productid 
+				) AND c.channelid = '7'"; */
+			}
+		
+			/*** query list of products, sort by manufacturer name */
+			/*			
+			 $this->query = "Select c.url_safe_category_name, c.category_name, p.productid, p.product_name, 
+				p.total_reviews, p.average_rating, p.quickrating_average, p.quickrating_count, 
+				p.url_safe_product_name, m.manufacturer_name, m.url_safe_manufacturer_name, 
+				(select avg(review_rating) from products_site_reviews psr 
+				where psr.productid = p.productid) as web_score_rating, 
+				(select sum(review_count) from products_site_reviews psr 
+				where psr.productid = p.productid) as web_score_count from products p
+				left join categories c on c.categoryid = p.categoryid 
+				left join manufacturers m on p.manufacturerid = m.manufacturerid $offset_sql
+				and m.url_safe_manufacturer_name = '$brand[brand]' 
+				and p.visible = '1' order by p.product_name asc Limit 50";
+				*/				
+				
+				$url = explode( '/', $_SERVER['REQUEST_URI']);
+				$row = $this->get_node_id($url[1], $PSite );
+				
+				$this->query = "Select c.url_safe_category_name, c.category_name, p.productid, p.product_name, p.product_image, p.total_reviews, 
+				p.average_rating, p.quickrating_average, p.quickrating_count, p.url_safe_product_name, m.manufacturer_name, m.url_safe_manufacturer_name, 
+				(select avg(review_rating) from products_site_reviews psr where psr.productid = p.productid) as web_score_rating, 
+				(select sum(review_count) from products_site_reviews psr where psr.productid = p.productid) as web_score_count 
+				from products p, categories c, manufacturers m, channel_categories cc WHERE 
+				cc.categoryid = c.categoryid and p.manufacturerid = m.manufacturerid and c.categoryid = p.categoryid and 
+				c.channelid = '$PSite' and cc.node_level = 3 and cc.nodeid like '".$row->nodeid."%' and m.url_safe_manufacturer_name = '$brand[brand]' and 
+				p.visible = '1' order by p.product_name asc $offset_sql";
+				
+								
+				
+			//$this->db->show_errors();
+			return $this->db->get_results( $this->query, object );
+		}
+		
+		/**
+		* get_product_brand_cat_list is same as get_product_list, except get products
+		* by brand name and within a specific category
+		*/
+		
+		function get_product_brand_cat_list( $brand, $PSite ) {
+						
+			/*$brand['category'] = $this->category_permalink_to_db($brand['category']);*/ //Zaved commented as on 5Dec2016
+		
+			/** make sure $page value is 1 or greater */
+			$page = (is_numeric($_GET['page']) && $_GET['page'] > 1) ? $_GET['page'] : 1;
+			/**
+			* 50 results per page
+			* if page != 1, create sub query to create offset
+			* subquery only used because this is mssql and does not support LIMIT X,Y
+			* once converted to mysql, the subquery is not needed*/
+			
+			if($page == 1) {
+								
+				$offset_sql = "WHERE c.channelid = '$PSite'";
+			
+			} else {
+				
+				$offset = $page * 50 - 50;
+				$offset_sql = "WHERE p.productid NOT IN (
+						Select * From ( 
+						Select sp.productid from categories sc 
+						left join products sp on sc.categoryid = sp.categoryid 
+						left join manufacturers sm on sp.manufacturerid = sm.manufacturerid 
+						where sc.channelid = '$PSite' and sm.url_safe_manufacturer_name = '$brand[brand]' 
+						and sc.url_safe_category_name = '$brand[category]' and sp.visible = '1' 
+						order by sp.product_name asc Limit $offset ) as productid 
+				) AND c.channelid = '$PSite'";
+			}
+		
+			/** * query list of products, sort by manufacturer name */
+			$this->query = "Select c.url_safe_category_name,c.category_name,p.productid, p.product_name, p.product_image, 
+			p.total_reviews, p.average_rating, p.quickrating_average,p.quickrating_count,p.url_safe_product_name, 
+			m.manufacturer_name,m.url_safe_manufacturer_name, (select avg(review_rating) 
+			From products_site_reviews psr where psr.productid = p.productid) as web_score_rating, 
+			(select sum(review_count) from products_site_reviews psr where psr.productid = p.productid) 
+			as web_score_count from categories c left join products p on c.categoryid = p.categoryid 
+			Left join manufacturers m on p.manufacturerid = m.manufacturerid $offset_sql
+			and m.url_safe_manufacturer_name = '$brand[brand]' 
+			and c.url_safe_category_name = '$brand[category]' and p.visible = '1' 
+			order by p.product_name asc Limit 50";
+			
+			
+
+			//$this->db->show_errors();
+			return $this->db->get_results( $this->query, object );
+		}
+		
+		/*** get_product_brand_list_total() returns count of all products in a specific brand ****/
+		
+		function get_product_brand_list_total($brand) {
+		
+			/*** query product count and brand name ***/
+			$this->query = "Select count(p.productid) as product_count, m.manufacturer_name, m.url_safe_manufacturer_name 
+			From products p left join manufacturers m on p.manufacturerid = m.manufacturerid 
+			Where m.url_safe_manufacturer_name = '$brand[brand]' and p.visible = '1' 
+			Group by m.manufacturer_name, m.url_safe_manufacturer_name";
+			//$this->db->show_errors();
+			return $this->db->get_row( $this->query, object );
+		}
+		
+		/**
+		* get_product_brand_cat_list_total() returns count of all products in a specific category
+		* in a specific brand*/
+		
+		function get_product_brand_cat_list_total($brand) {
+			
+			/*$brand['category'] = $this->category_permalink_to_db($brand['category']);*/
+			/*** query product count, brand name, category name*/
+			
+			$this->query = "Select count(p.productid) as product_count, m.manufacturer_name, 
+				m.url_safe_manufacturer_name, c.category_name, c.url_safe_category_name from products p 
+				left join categories c on p.categoryid = c.categoryid 
+				left join manufacturers m on p.manufacturerid = m.manufacturerid 
+				where m.url_safe_manufacturer_name = '$brand[brand]' and p.visible = '1' 
+				and c.url_safe_category_name = '$brand[category]' group by m.manufacturer_name, 
+				m.url_safe_manufacturer_name, c.category_name, c.url_safe_category_name";
+
+			
+			//$this->db->show_errors();
+			return $this->db->get_row( $this->query, object );
+		}
+		
+		/**
+		* Get alphabetical list of manufacturers for brand page listing 
+		* Due to database structure, need to get list through Categories > Products > Manufactureres 
+		* with where clause of Category.channelid = 7 
+		* Let me know if there is a shorter way to identify manufactureres of GolfReview products only.
+		*/		
+		
+		function cr_get_brand_list($cat, $all, $psite) {
+			
+			$cal_sql = "";			
+			if($all == 0) {
+				
+				//$cat['category'] = $this->category_permalink_to_db($cat['category']); Commnetde 
+				//if($cat['base'] == 'golf-equipment') $cat_sql = "AND c.url_safe_category_name IN ('$cat[cat_list]')";
+				//else $cat_sql = "AND c.url_safe_category_name = '$cat[category]'";
+				$cat_sql = "AND c.url_safe_category_name = '$cat[category]'";
+			}
+			else {
+				
+				$cat_sql = "AND c.url_safe_category_name IN ('$cat[cat_list]')";
+			}
+			
+			$this->query = "Select m.manufacturer_name, m.url_safe_manufacturer_name from categories c 
+			left join products p on c.categoryid = p.categoryid 
+			left join manufacturers m on p.manufacturerid = m.manufacturerid 
+			where c.channelid = '$psite' $cat_sql 
+			and p.visible = '1' group by m.manufacturer_name,m.url_safe_manufacturer_name 
+			order by m.manufacturer_name asc";
+			
+			//$this->db->show_errors();
+			return $this->db->get_results( $this->query, object );
+		}
+
+		function cr_get_brand_list_search($cat, $all, $psite) {
+			
+			$cal_sql = "";			
+			if($all == 0) {
+				
+				//$cat['category'] = $this->category_permalink_to_db($cat['category']); Commnetde 
+				//if($cat['base'] == 'golf-equipment') $cat_sql = "AND c.url_safe_category_name IN ('$cat[cat_list]')";
+				//else $cat_sql = "AND c.url_safe_category_name = '$cat[category]'";
+				$cat_sql = "AND c.url_safe_category_name = '$cat[category]'";
+			}
+			else {
+				
+				$cat_sql = "AND c.url_safe_category_name IN ('$cat[cat_list]')";
+			}
+			
+			$this->query = "Select m.manufacturer_name, m.url_safe_manufacturer_name from categories c 
+			left join products p on c.categoryid = p.categoryid 
+			left join manufacturers m on p.manufacturerid = m.manufacturerid 
+			where c.channelid = '$psite' $cat_sql 
+			and p.visible = '1' group by m.manufacturer_name,m.url_safe_manufacturer_name 
+			order by m.manufacturer_name asc";
+			
+						
+			//$this->db->show_errors();
+			return $this->db->get_results( $this->query, object );
+		}		
+		/*** Get all cities of location in a state ****/
+		
+		function get_site_location_cities($st) {
+			
+			
+			//Golf Course Query commented by Mari
+			/*$this->query = "Select av_ct.attribute_value as city from products p 
+			left join attribute_values av_st on p.productid = av_st.productid 
+			left join attribute_values av_ct on p.productid = av_ct.productid 
+			where p.manufacturerid = 8051 and av_st.attributeid = 70 
+			and av_st.attribute_value = '$st[state]' and av_ct.attributeid = 69 
+			Group by av_ct.attribute_value Order by av_ct.attribute_value";*/
+			
+			$this->query = "Select av_ct.attribute_value as city from products p 
+			left join attribute_values av_st on p.productid = av_st.productid 
+			left join attribute_values av_ct on p.productid = av_ct.productid 
+			where p.manufacturerid = 9668 and av_st.attributeid = 70 
+			and av_st.attribute_value = '$st[state]' and av_ct.attributeid = 69 
+			Group by av_ct.attribute_value Order by av_ct.attribute_value";
+			
+			//$this->db->show_errors();
+			return $this->db->get_results( $this->query, object );
+		}
+		
+		/** * Get count of all location in a State ****/
+		
+		function get_site_location_state_count($st) {
+		
+			//Golf Course Query commented by Mari
+			/*$this->query = "select count(p.productid) as total_count from products p 
+			left join attribute_values av_st on p.productid = av_st.productid 
+			left join attribute_values av_ct on p.productid = av_ct.productid 
+			where p.manufacturerid = 8051 and p.channelid = 82 and p.visible = 1 and 
+			(av_ct.attributeid = 70 and av_st.attribute_value = '$st')";*/
+			
+			//Golf Course Query ends here
+			
+			$this->query = "select count(p.productid) as total_count from products p 
+			left join attribute_values av_st on p.productid = av_st.productid 
+			left join attribute_values av_ct on p.productid = av_ct.productid 
+			where p.manufacturerid = 9668 and p.channelid = 84 and p.visible = 1 and 
+			(av_ct.attributeid = 70 and av_st.attribute_value = '$st')";
+			
+			//$this->db->show_errors();
+			return $this->db->get_row( $this->query, object );
+		}
+		
+		function get_site_location_listing($parts) {
+		
+			$sql_where = "";
+			if(!is_numeric($parts['zip'])) {
+			
+				$parts['city'] = $this->parse_city_name($parts['city']);
+				$sql_where = "AND (av_st.attributeid = 70 and av_st.attribute_value = '$parts[state]')
+							 AND (av_ct.attributeid = 69 and av_ct.attribute_value = '$parts[city]')";
+			} else {
+				
+				$sql_where = "AND (av_zp.attributeid = 71 and av_zp.attribute_value LIKE '$parts[zip]%') 
+							AND av_st.attributeid = 70 AND av_ct.attributeid = 69";
+			}
+		
+			$this->query = "Select p.productid, p.product_name, p.total_reviews, p.average_rating, p.product_image, 
+							p.quickrating_average, p.quickrating_count, p.url_safe_product_name, 
+							(select avg(review_rating) from products_site_reviews wsr 
+							Where wsr.productid = p.productid) as web_score_rating, (select sum(review_count) 
+							From products_site_reviews wsc where wsc.productid = p.productid) 
+							As web_score_count, av_st.attribute_value as state, av_ct.attribute_value 
+							As city from products p left join attribute_values av_st on p.productid = av_st.productid 
+							Left join attribute_values av_ct on p.productid = av_ct.productid 
+							Left join attribute_values av_zp on p.productid = av_zp.productid 
+							Where p.manufacturerid = 9668 
+							$sql_where 
+							And av_st.attributeid = 70 and av_ct.attributeid = 69 
+							Group by p.productid, p.product_name, p.total_reviews, p.average_rating, 
+							p.quickrating_average, p.quickrating_count, p.url_safe_product_name, 
+							av_st.attribute_value, av_ct.attribute_value order by p.product_name";
+							
+			//$this->db->show_errors();
+			return $this->db->get_results( $this->query, object );
+		}
+				
+		function get_site_location_search($search) {
+		
+			$this->query = "Select p.product_name, p.url_safe_product_name, p.combined_average, p.total_reviews, 
+						av_st.attribute_value as state, av_ct.attribute_value as city from products p 
+						left join attribute_values av_st on p.productid = av_st.productid 
+						left join attribute_values av_ct on p.productid = av_ct.productid 
+						left join attribute_values av_zp on p.productid = av_zp.productid 
+						where p.manufacturerid = 9668 and p.product_name like '%$search[search]%' 
+						and av_st.attributeid = 70 and av_ct.attributeid = 69 
+						group by p.product_name, p.url_safe_product_name, p.combined_average, 
+						p.total_reviews, av_st.attribute_value, av_ct.attribute_value 
+						order by p.product_name ";
+			
+			//$this->db->show_errors();
+			return $this->db->get_results( $this->query, object );
+		}
+		
+		/*** Get location from name ***/
+		
+		function get_site_location($course) {
+		
+		    //Mari remove article id from query(p.articleid)
+			/*$this->query = "Select p.productid, p.product_name, product_description, p.total_reviews, 
+					p.average_rating, p.product_image, p.quickrating_count, p.quickrating_average, 
+					p.combined_average, p.url_safe_product_name, p.articleid, (select attribute_value 
+					From attribute_values av where av.productid = p.productid and av.attributeid = 69) 
+					as city, (select attribute_value from attribute_values av 
+					Where av.productid = p.productid and av.attributeid = 70) as state 
+					From products p left join attribute_values av on p.productid = av.productid 
+					Where p.manufacturerid = 9668 and (av.attributeid = 70 
+					and av.attribute_value = '$course[state]') And p.url_safe_product_name ='$course[name]'";*/
+					
+			$this->query = "Select p.productid, p.product_name, product_description, p.total_reviews, 
+					p.average_rating, p.product_image, p.quickrating_count, p.quickrating_average, 
+					p.combined_average, p.url_safe_product_name, (select attribute_value 
+					From attribute_values av where av.productid = p.productid and av.attributeid = 69) 
+					as city, (select attribute_value from attribute_values av 
+					Where av.productid = p.productid and av.attributeid = 70) as state 
+					From products p left join attribute_values av on p.productid = av.productid 
+					Where p.manufacturerid = 9668 and (av.attributeid = 70 
+					and av.attribute_value = '$course[state]') And p.url_safe_product_name ='$course[name]'";
+					
+		
+			//$this->db->show_errors();
+			return $this->db->get_row( $this->query, object );
+			
+		}
+		
+		/*** Get location by ID */
+		
+		function get_site_location_by_id($id) {
+			
+			$this->query = "Select p.productid, p.product_name, product_description, p.total_reviews, 
+					p.average_rating, p.product_image, p.quickrating_count, p.quickrating_average, 
+					p.combined_average, p.url_safe_product_name, (select attribute_value 
+					From attribute_values av where av.productid = p.productid and av.attributeid = 69) as city, 
+					(select attribute_value from attribute_values av where av.productid = p.productid and 
+					av.attributeid = 70) as state from products p 
+					Left join attribute_values av on p.productid = av.productid 
+					Where p.productid = '$id'";
+				
+			//$this->db->show_errors();
+			return $this->db->get_row( $this->query, object );
+		}
+		
+		/*** Get location from name ***/
+		
+		function get_site_location_detail($course) {
+		
+			$this->query = "Select 
+					(select attribute_value from attribute_values av where av.productid = p.productid 
+					and av.attributeid = 68) as address, (select attribute_value from attribute_values av 
+					where av.productid = p.productid and av.attributeid = 69) as city, 
+					(select attribute_value from attribute_values av where av.productid = p.productid 
+					and av.attributeid = 70) as state, (select attribute_value from attribute_values av 
+					where av.productid = p.productid and av.attributeid = 71) as zipcode, 
+					(select attribute_value from attribute_values av where av.productid = p.productid 
+					and av.attributeid = 72) as facility, (select attribute_value from attribute_values av 
+					where av.productid = p.productid and av.attributeid = 74) as phone, 
+					(select attribute_value from attribute_values av where av.productid = p.productid 
+					and av.attributeid = 343) as lat, (select attribute_value from attribute_values av 
+					where av.productid = p.productid and av.attributeid = 342) as lng from products p 
+					left join attribute_values av on p.productid = av.productid where p.manufacturerid = 9668 
+					and (av.attributeid = 70 and av.attribute_value = '$course[state]') 
+					and p.url_safe_product_name ='$course[name]'";
+
+			//$this->db->show_errors();
+			return $this->db->get_row( $this->query, object );
+		}
+		
+		/*** get_product_permalink() - get product permalink info from product id*/		
+		function get_product_permalink($id) {
+			
+			$this->query = "SELECT p.url_safe_product_name,p.manufacturerid,c.url_safe_category_name, m.url_safe_manufacturer_name 
+			FROM products p JOIN categories c ON p.categoryid = c.categoryid JOIN manufacturers m ON p.manufacturerid = m.manufacturerid 
+			WHERE p.productid = '$id'";
+			
+			//$this->db->show_errors();
+			return $this->db->get_row( $this->query, object );
+		}
+		
+		function cr_do_qik_rate($id,$rating) { // Zaved changed to cr_ to cr_ as on 02/Dec/2016
+			
+			$this->query = "Select count(ratingid) as rated from rating Where foreignid = '$id' 
+							And ipaddress = '$_SERVER[REMOTE_ADDR]'";
+			
+			$CheckRated = $this->db->get_row($this->query);
+		
+			// if not rated product yet //
+			if($CheckRated->rated == 0) {
+
+				$this->db->query("INSERT INTO rating (foreignid, typeid, rate_value, ipaddress, username, vbulletinid) 
+								VALUES ('$id','1','$rating','$_SERVER[REMOTE_ADDR]','','')");
+				
+				// get current quick ratings
+				$this->result	= "Select count(ratingid) as total, sum(rate_value) as points from rating where foreignid = '$id'";
+				$Quick_Points	= $this->db->get_row($this->result);
+				
+				// get current review ratings
+				$this->result	= "Select total_reviews, average_rating from products where productid = '$id'";
+				$Review_ratings = $this->db->get_row($this->result);
+			
+				// set review ratings into Product object
+				if($Review_ratings) {
+					
+					$Product->average_rating	= $Review_ratings->average_rating;
+					$Product->total_reviews		= $Review_ratings->total_reviews;
+					
+				} else {
+					
+					// if no review ratings, set values to 0
+					$Product->average_rating	= 0;
+					$Product->total_reviews		= 0;
+				}
+
+				// new quick rating values
+			
+				if(!$Quick_Points) $Quick_Points->points = 0;
+				if(!$Quick_Points) $Quick_Points->total = 0;
+				
+				$Product->quickrating_average 	= round($Quick_Points->points/$Quick_Points->total,1);
+				$Product->quickrating_count 	= $Quick_Points->total;
+			
+				// get current external ratings
+				$external_ratings = $this->get_external_product_ratings($id);
+			
+				// put external ratings into Product object
+				if($external_ratings && is_numeric($external_ratings->web_score_count) && is_numeric($external_ratings->web_score_rating)) {
+					
+					$Product->web_score_count	= $external_ratings->web_score_count;
+					$Product->web_score_rating	= $external_ratings->web_score_rating;
+					
+				} else {
+					
+					$Product->web_score_count	= 0;
+					$Product->web_score_rating	= 0;
+				}
+		
+				// get total ratings and averages
+				$Product->total_rating			= cr_get_overall_rating_average($Product);
+				$Product->total_rating_count	= cr_get_overall_rating_count($Product);
+				$this->db->query("Update products set quickrating_count = '$Quick_Points->total', quickrating_average = '$Product->quickrating_average' Where productid = '$id'");
+				
+				// return new overall count, overall rating, quick count, quick rating
+				return $Product->total_rating_count . '|' . $Product->total_rating . '|' . $Product->quickrating_count . '|' . $Product->quickrating_average;
+			
+			} else {
+				
+				return false;
+			}
+		}
+		
+		/*** Pagination function for category list page*/
+		
+		function submit_product_review($post) {
+		
+			if ( strtolower($post['6_letters_code']) != $_SESSION['captcha_id']) {
+		
+				return false;
+			
+			} else {
+			
+				/** Escape single quotes **/
+				foreach($post as $key => $val) {
+					
+					$post[$key] = str_replace("'","''",$val);
+				}
+				
+				$this->query = "INSERT INTO reviews (
+				
+					reviewerip, reviewer_email, productid, model, channelid, value_rating, 
+					overall_rating, customer_service, summary, reviewer_experience, 
+					similar_products, user_screen_name,	vbulletinid, valid  
+				)
+				VALUES (
+									
+					'$_SERVER[REMOTE_ADDR]', '$post[user_email]', '$post[ProductID]', 
+					'$post[model_reviewed]', '$post[PSite]', '$post[Value_Rating]', '$post[Overall_Rating]', 
+					'$post[Customer_Service]', '$post[Summary]', '$post[reviewer_experience]', 
+					'$post[Similar_Products]', '$post[user_name]','$post[vbulletinid]', 1
+				)";
+				
+				$this->db->query($this->query);
+			
+				/**
+				* Get current review and QIK ratings from product to add new rating
+				* and update average ratings for product
+				*/
+			 
+				$this->result 	= "Select total_reviews, quickrating_count from products where productid = '$post[ProductID]'";
+				$Review 		= $this->db->get_row( $this->result, object );
+				
+				if($Review) $Review->total_reviews++;
+					
+				else $Review->total_reviews = 1;
+				
+				$this->result = "Select sum(rate_value) as points from rating where foreignid = '$post[ProductID]'";
+				$Quick_Points = $this->db->get_row( $this->result, object );
+				
+				if(!$Quick_Points) $Quick_Points->points = 0;
+								
+				$this->result	= "Select sum(overall_rating) as points from reviews where productid = '$post[ProductID]'";
+				$Review_Points	= $this->db->get_row( $this->result, object );
+				
+				if(!$Review_Points) $Review_Points->points = 0;
+				
+				$New['average_rating'] = round($Review_Points->points/$Review->total_reviews,2);
+				
+				$combinePoints	= $Review_Points->points + $Quick_Points->points;
+				$combineRatings = $Review->total_reviews + $Review->quickrating_count;
+				
+				$New['combined_rating'] = round($combinePoints/$combineRatings, 2);
+				
+				$this->db->query("UPDATE products SET total_reviews = '$Review->total_reviews', 
+								average_rating = '$New[average_rating]', combined_average = '$New[combined_rating]' 
+								WHERE productid = '$post[ProductID]'");
+				return true;
+			}
+		}		
+		
+		/*** Pagination function for category list page ****/
+		
+		function cr_category_pagination( $category, $current, $perpage=50 ) {
+		
+			$current = (!is_numeric($_GET['pg'])) ? 1 : $current;
+			$totalPages = ceil($category->product_count/$perpage);
+			
+			if($totalPages > 1) {
+			echo 'show';
+			$prev = $current - 1;
+			$next = $current + 1;
+			
+			if($current != 1) 
+				echo ' <a href="' . cr_category_url_from_cat($category->url_safe_category_name, 1) . '?pg='.$prev.'">Prev 50</a> ';
+			if($current != $totalPages)
+				echo ' <a href="' . cr_category_url_from_cat($category->url_safe_category_name, 1) . '?pg='.$next.'">Next 50</a>';
+			}
+		}
+		
+		/*** Output of 'Showing X-X+50 of Category'*/
+		
+		function cr_category_showing($category,$current,$perpage=50) {
+		
+			$current = (is_numeric($current)) ? $current : 1;
+			$max = ceil($category->product_count/$perpage);
+			$start = $current * $perpage - 49;
+			if($current == $max) $end = $category->product_count;
+			else $end = $current * $perpage;
+			echo $start . '-' . $end;
+		}
+		
+		/* Zaved Commented as on 5 Dec 2016
+		function category_permalink_to_db($cat) { // These string does not get changed beacused this is only case for golf equipment. 
+		
+			/** * Change website category permalink term to database permalink */ 
+			/*$str = array('golf-balls','golf-shoes','golf-bags');
+			$rep = array('balls','shoes','bags');
+			return str_replace($str, $rep, $cat);
+		}
+		*/
+		
+		function do_review_rating_distribution($reviews,$Ratings) {
+			
+			foreach($reviews as $r) {
+			
+				$Ratings[$r->Overall_Rating] = $Ratings[$r->Overall_Rating] + 1;
+			}
+			
+			return $Ratings;
+		}
+		
+		function parse_url() {
+			
+			$return = false;
+			$parts = explode('/',$_SERVER['REQUEST_URI']);
+			
+			if($parts[4] != '') {
+			
+				$returnparts = explode('.html',$parts[4]);
+				$return['product'] = $returnparts[0];
+				$return['product_category'] = $parts[3];
+			}
+			if($parts[2] != '') {
+				
+				$c_parts = explode(".html",$parts[2]);
+				$return['category'] = $c_parts[0];
+			}
+			
+			$return['base'] = $parts[1];
+			return $return;
+		}
+		
+		function parse_brand_url() {
+		
+			$return	= false;
+			$parts	= explode('/',$_SERVER['REQUEST_URI']);
+			//print_r($parts);
+			
+			if($parts[2] != '') {
+				
+				$returnparts = explode(".html",$parts[3]);
+				$return['category'] = $returnparts[0];
+			}
+			
+			if($parts[1] != '') {
+				
+				$brand = ( $parts[2] == 'brand' ) ? $parts[3] : $parts[2] ; //added for main category.
+				$returnparts = explode(".html", $brand);
+				$return['brand'] = $returnparts[0];
+			}
+			
+			return $return;
+		}
+		
+		function parse_review_url() {
+			
+			$re = explode("?", str_replace(".html","-review.html", $_SERVER['REQUEST_URI']) );
+			return $re[0];
+		}
+		
+		function parse_product_review_url() {
+		
+			$return['is_course'] = false;
+			$parts = explode('/',$_SERVER['REQUEST_URI']);
+			
+			if($parts[4] != '') {
+				
+				$name = explode('.html',$parts[4]);
+				$return['product'] = str_replace("-review","",$name[0]);
+				$return['product_category'] = $parts[3];
+				$return['category'] = $parts[2];
+				if($parts[1] == 'golf-courses') $return['is_course'] = true;	//Pennding to have redesign review pages.
+			}
+			return $return;
+		}
+		
+		function parse_state_url() {
+			
+			$parts = explode('/',$_SERVER['REQUEST_URI']);
+		
+			if(str_replace(".html","",$parts[2]) == 'public-golf-courses' || 
+				str_replace(".html","",$parts[2]) == 'driving-ranges' || 
+				str_replace(".html","",$parts[2]) == 'best-golf-courses') {
+				
+				$return['state'] = str_replace(".html","",$parts[3]);
+				$return['course_type'] = $parts[2];
+				
+			} else {
+			
+				$return['state'] = str_replace(".html","",$parts[2]);
+				$return['course_type'] = $parts[1]; // Changed By Zaved as on 22/Nov/2016
+			}
+			
+			$return['state'] = cr_state_abbr($return['state']);
+			return $return;
+		}
+		
+		function parse_state_city_url() {
+			
+			$return = false;
+			$parts = explode('/',$_SERVER['REQUEST_URI']);
+			if($parts[3] != '') {
+				
+				$returnparts = explode('.',$parts[3]);
+				$return['product'] = $returnparts[0];
+			}
+			if($parts[2] != '') {
+				
+				$c_parts = explode(".",$parts[2]);
+				$return['category'] = $c_parts[0];
+			}
+			
+			return $return;
+		}
+		
+		function parse_city_permalink($city) {
+			
+			return str_replace(" ","-",$city);
+		}
+		
+		function parse_city_name($city) {
+		
+			return str_replace("-"," ",$city);
+		}
+		
+		function parse_location_url() {
+			
+			$parts = explode('/',$_SERVER['REQUEST_URI']);
+		
+			if( str_replace(".html","",$parts[2]) == 'public-golf-courses' || 
+				str_replace(".html","",$parts[2]) == 'driving-ranges' || 
+				str_replace(".html","",$parts[2]) == 'best-golf-courses' ) {
+				
+					if($parts[5] != '') {
+						
+						$name = explode(".html",$parts[5]);
+						$return['name'] = $name[0];
+					}
+					if($parts[4] != '') {
+					
+						$return['city'] = str_replace(".html","",$parts[4]);
+						$return['state'] = $parts[3];						
+					}
+					else {
+					
+						$return['zip'] = str_replace(".html","",$parts[3]);
+					}
+					
+					$return['course_type'] = str_replace(".html","",$parts[2]);
+				}
+				else {
+				
+					if($parts[4] != '') {
+					
+						$name = explode(".html",$parts[4]);
+						$return['name'] = $name[0];
+					}
+					if($parts[3] != '') {
+						
+						$return['city'] = str_replace(".html","",$parts[3]);
+						$return['state'] = $parts[2];
+						
+					} else {
+						
+						$return['zip'] = str_replace(".html","",$parts[2]);
+					}
+										
+					$return['course_type'] =  str_replace(".html","",$parts[1]); // Added by Zaved as on 22/Nov/2016
+				}
+				
+			$return['state'] = cr_state_abbr($return['state']);
+			return $return;
+		}
+		
+		function get_site_review_page($part) {
+			
+			if(strpos("page",$part)) {
+				
+				$thepage = explode(".html",str_replace("page","",$part));
+				return $thepage[0];
+			
+			} else {
+				
+				return 1;
+			}
+		}
+		
+		function get_site_review_location() {
+			
+			return $this->currentpage;
+		}
+		
+		function set_site_review_location($p) {
+			
+			$this->currentpage = $p;
+		}
+		
+		function get_golfreview_meta_vars() {
+			
+			return $this->meta_vars;
+		}
+		
+		function set_site_review_meta_vars($vars) {
+			
+			$this->meta_vars = $vars;
+		}
+	}
+?>

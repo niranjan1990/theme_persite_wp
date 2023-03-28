@@ -1,0 +1,42 @@
+	#pluginWrap  {	width: 640px; padding: 30px 0 0 80px;}
+	#pluginWrap  form{ margin:10px 0 0 1px; }
+
+	#pluginWrap  form #ipaddress{ margin:10px 0 0 1px;}
+	#pluginWrap  form #ipaddress label{ margin:0px 30px 0 1px;}
+	#pluginWrap  form #ipaddress input{ margin:0px 10px 0 1px; width:220px; }
+
+	#pluginWrap  form #MssqlString{ margin:10px 0 0 1px;  }
+	#pluginWrap  form #MssqlString label{ margin:0px 10px 0 1px;}
+	#pluginWrap  form #MssqlString input{ margin:0px 10px 0 1px; width:220px; }
+
+	#pluginWrap  form #MssqlUser{ margin:10px 0 0 1px; }
+	#pluginWrap  form #MssqlUser label{ margin:0px 42px 0 1px;}
+	#pluginWrap  form #MssqlUser input{ margin:0px 10px 0 1px; width:220px; }
+
+	#pluginWrap  form #MssqlPassword{ margin:10px 0 0 1px; }
+	#pluginWrap  form #MssqlPassword label{ margin:0px 49px 0 1px;}
+	#pluginWrap  form #MssqlPassword input{ margin:0px 10px 0 1px; width:220px; }
+
+	#pluginWrap  form #MssqlDB{ margin:10px 0 0 1px;}
+	#pluginWrap  form #MssqlDB label{ margin:0px 2px 0 1px;}
+	#pluginWrap  form #MssqlDB input{ margin:0px 10px 0 1px; width:220px; }
+
+	#pluginWrap  form #MssqlButton{ margin:0px 0 0 0px;}
+	#pluginWrap  form #MssqlButton #testCon{ margin:20px 0px 0 105px; width:140px; }
+	
+	#display_media_table .paging { padding:10px 0px 0px 0px; text-align:center; font-size:13px;}
+	#display_media_table .paging.display{ text-align:right;}
+	#display_media_table .paging a, .paging span {padding:2px 8px 2px 8px; font-weight :normal}
+	#display_media_table .paging span {font-weight:bold; color:#000; font-size:13px; }
+	#display_media_table .paging a, #display_media_table .paging a:visited {color:#000; text-decoration:none; border:1px solid #dddddd;}
+	#display_media_table .paging a:hover { text-decoration:none; background-color:#6C6C6C; color:#fff; border-color:#000;}
+	#display_media_table .paging span.prn { font-size:13px; font-weight:normal; color:#aaa; }
+	#display_media_table .paging a.prn, #display_media_table .paging a.prn:visited { border:2px solid #dddddd;}
+	#display_media_table .paging a.prn:hover { border-color:#000;}
+	#display_media_table .paging p#total_count{color:#aaa; font-size:12px; font-weight: normal; padding-top:8px; padding-left:18px;}
+	#display_media_table .paging p#total_display{color:#aaa; font-size:12px; padding-top:10px;}
+	.image-editor { display: none;}
+	#display_media_table .toggelClassName { display: none; }
+	/* #display_media_table .media-button-action { display: none; } */
+	#display_media_table .right { margin-left: 20px; padding: 5px 15px 5xp 15px;}
+	#display_media_table #img_view_btn_id { margin-left: 419px;}

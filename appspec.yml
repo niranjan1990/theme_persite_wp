@@ -1,0 +1,19 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /data/deploy/core
+permissions:
+  - object: /data/deploy/core/wp-content
+    owner: phpfpm
+    group: webapps
+    mode: 664
+    type:
+      - file
+  - object: /data/deploy/core/wp-content
+    owner: phpfpm
+    group: webapps
+    mode: 775
+    type:
+      - directory
+      

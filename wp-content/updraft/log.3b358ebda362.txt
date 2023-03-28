@@ -1,0 +1,894 @@
+0000.001 (0) Opened log file at time: Mon, 06 Feb 2017 07:01:32 +0000 on http://staging.golfreview.com
+0000.011 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.12.23 WP: 4.5.2 PHP: 5.3.29 (apache2handler, Linux app-stage-01 2.6.32-573.7.1.el6.x86_64 #1 SMP Tue Sep 22 22:00:00 UTC 2015 x86_64) MySQL: 5.5.30 WPLANG: en_US Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 39M | 39.3M) multisite: N openssl: OpenSSL 1.0.1e-fips 11 Feb 2013 mcrypt: Y LANG: C ZipArchive::addFile: Y
+0000.016 (0) Free space on disk containing Updraft's temporary directory: 29873.1 MB
+0000.025 (0) Tasks: Backup files: 1 (schedule: manual) Backup DB: 1 (schedule: manual)
+0000.082 (0) Requesting semaphore lock (fd) (apparently not via scheduler)
+0000.244 (0) Set semaphore last lock (fd) time to 2017-02-06 07:01:33
+0000.249 (0) Semaphore lock (fd) complete
+0000.325 (0) Backup run: resumption=0, nonce=3b358ebda362, begun at=1486364492 (1s ago), job type=backup
+0000.351 (0) Scheduling a resumption (1) after 300 seconds (1486364793) in case this run gets aborted
+0000.405 (0) Checking if we have a zip executable available
+0000.444 (0) Creation of backups of directories: beginning
+0000.483 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0000.991 (0) Total entities for the zip file: 518 directories, 3282 files (0 skipped as non-modified), 42.5 MB
+0001.039 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 100 files added (on-disk size: 0 KB)
+0001.067 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 200 files added (on-disk size: 0 KB)
+0001.113 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 300 files added (on-disk size: 0 KB)
+0001.146 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 400 files added (on-disk size: 0 KB)
+0001.226 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 500 files added (on-disk size: 0 KB)
+0001.263 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (16.3 MB, 3282 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0004.951 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 600 files added (on-disk size: 11898.8 KB)
+0005.001 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 700 files added (on-disk size: 11898.8 KB)
+0005.025 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 800 files added (on-disk size: 11898.8 KB)
+0005.058 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 900 files added (on-disk size: 11898.8 KB)
+0005.085 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 1000 files added (on-disk size: 11898.8 KB)
+0005.089 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (9 MB, 3282 files batched, 501 (1002) added so far); re-opening (prior size: 11898.8 KB)
+0006.521 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 1100 files added (on-disk size: 15828.5 KB)
+0006.575 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 1200 files added (on-disk size: 15828.5 KB)
+0006.621 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 1300 files added (on-disk size: 15828.5 KB)
+0006.657 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 1400 files added (on-disk size: 15828.5 KB)
+0006.697 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 1500 files added (on-disk size: 15828.5 KB)
+0006.701 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (5.1 MB, 3282 files batched, 501 (1503) added so far); re-opening (prior size: 15828.5 KB)
+0007.682 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 1600 files added (on-disk size: 17356.9 KB)
+0007.725 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 1700 files added (on-disk size: 17356.9 KB)
+0007.792 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 1800 files added (on-disk size: 17356.9 KB)
+0007.847 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 1900 files added (on-disk size: 17356.9 KB)
+0007.913 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 2000 files added (on-disk size: 17356.9 KB)
+0007.923 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.5 MB, 3282 files batched, 501 (2004) added so far); re-opening (prior size: 17356.9 KB)
+0008.375 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 2100 files added (on-disk size: 18067.9 KB)
+0008.435 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 2200 files added (on-disk size: 18067.9 KB)
+0008.486 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 2300 files added (on-disk size: 18067.9 KB)
+0008.621 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 2400 files added (on-disk size: 18067.9 KB)
+0008.680 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 2500 files added (on-disk size: 18067.9 KB)
+0008.686 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (7.9 MB, 3282 files batched, 501 (2505) added so far); re-opening (prior size: 18067.9 KB)
+0010.623 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 2600 files added (on-disk size: 22061.8 KB)
+0010.671 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 2700 files added (on-disk size: 22061.8 KB)
+0010.734 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 2800 files added (on-disk size: 22061.8 KB)
+0010.920 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 2900 files added (on-disk size: 22061.8 KB)
+0010.975 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 3000 files added (on-disk size: 22061.8 KB)
+0010.996 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.7 MB, 3282 files batched, 501 (3006) added so far); re-opening (prior size: 22061.8 KB)
+0012.401 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 3100 files added (on-disk size: 22618.6 KB)
+0012.504 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip.tmp: 3200 files added (on-disk size: 22618.6 KB)
+0014.082 (0) Created plugins zip (0) - 23065.3 KB in 13.6 s (1697 KB/s) (SHA1 checksum: 658b73c4244e33b2810a9e9ecdd26b81df86a596)
+0014.092 (0) Beginning creation of dump of themes (split every: 400 MB)
+0014.247 (0) Total entities for the zip file: 27 directories, 270 files (0 skipped as non-modified), 4.3 MB
+0014.271 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0014.300 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0015.497 (0) Created themes zip (0) - 3314.9 KB in 1.4 s (2365.6 KB/s) (SHA1 checksum: e79ea1060cc4dba00b799b9529cc05d8fd9ac2e0)
+0015.515 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0015.520 (0) Looking for candidates to back up in: /sites/staging/www.golfreview.com/wp-content/uploads
+0015.524 (0) finding files: 2016: adding to list (1)
+0015.529 (0) finding files: db-backup: adding to list (2)
+0015.533 (0) finding files: 2017: adding to list (3)
+0015.539 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0015.598 (0) Total entities for the zip file: 7 directories, 10 files (0 skipped as non-modified), 0.2 MB
+0015.796 (0) Created uploads zip (0) - 144.9 KB in 0.3 s (579.2 KB/s) (SHA1 checksum: 8e3b5295af33e20ec32dbe5dcb598656b8517d37)
+0015.808 (0) Beginning backup of other directories found in the content directory (index: 0)
+0015.815 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0015.820 (0) Looking for candidates to back up in: /sites/staging/www.golfreview.com/wp-content
+0015.825 (0) finding files: plugins: skipping: this is the plugins directory
+0015.829 (0) finding files: Zaved-BCKUP-22DEC2016: adding to list (1)
+0015.834 (0) finding files: Zaved-MobileCode: adding to list (2)
+0015.838 (0) finding files: upgrade: skipping: excluded by options
+0015.843 (0) finding files: updraft: skipping: this is the updraft directory
+0015.848 (0) finding files: channels: adding to list (3)
+0015.857 (0) finding files: uploads: skipping: this is the uploads directory
+0015.863 (0) finding files: themes: skipping: this is the themes directory
+0015.868 (0) finding files: index.php: adding to list (4)
+0018.413 (0) Total entities for the zip file: 562 directories, 27812 files (0 skipped as non-modified), 769.4 MB
+0018.455 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0018.537 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 100 files added (on-disk size: 123.5 KB)
+0018.554 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 200 files added (on-disk size: 123.5 KB)
+0018.575 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 300 files added (on-disk size: 123.5 KB)
+0018.593 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 400 files added (on-disk size: 123.5 KB)
+0018.612 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 500 files added (on-disk size: 123.5 KB)
+0018.617 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (8.8 MB, 27812 files batched, 501 (502) added so far); re-opening (prior size: 123.5 KB)
+0020.935 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 600 files added (on-disk size: 4285.5 KB)
+0020.957 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 700 files added (on-disk size: 4285.5 KB)
+0020.983 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 800 files added (on-disk size: 4285.5 KB)
+0021.011 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 900 files added (on-disk size: 4285.5 KB)
+0021.095 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 1000 files added (on-disk size: 4285.5 KB)
+0021.155 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (5.2 MB, 27812 files batched, 501 (1003) added so far); re-opening (prior size: 4285.5 KB)
+0022.667 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 1100 files added (on-disk size: 5946.1 KB)
+0022.698 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 1200 files added (on-disk size: 5946.1 KB)
+0022.732 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 1300 files added (on-disk size: 5946.1 KB)
+0022.810 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 1400 files added (on-disk size: 5946.1 KB)
+0022.902 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 1500 files added (on-disk size: 5946.1 KB)
+0022.908 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2.1 MB, 27812 files batched, 501 (1504) added so far); re-opening (prior size: 5946.1 KB)
+0023.853 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 1600 files added (on-disk size: 6676.4 KB)
+0023.914 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 1700 files added (on-disk size: 6676.4 KB)
+0023.978 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 1800 files added (on-disk size: 6676.4 KB)
+0024.015 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 1900 files added (on-disk size: 6676.4 KB)
+0024.080 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 2000 files added (on-disk size: 6676.4 KB)
+0024.085 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (6.4 MB, 27812 files batched, 501 (2005) added so far); re-opening (prior size: 6676.4 KB)
+0026.396 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 2100 files added (on-disk size: 11643.9 KB)
+0026.519 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 2200 files added (on-disk size: 11643.9 KB)
+0026.648 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 2300 files added (on-disk size: 11643.9 KB)
+0026.743 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 2400 files added (on-disk size: 11643.9 KB)
+0026.810 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 2500 files added (on-disk size: 11643.9 KB)
+0026.817 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (8.7 MB, 27812 files batched, 501 (2506) added so far); re-opening (prior size: 11643.9 KB)
+0028.982 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 2600 files added (on-disk size: 15260.9 KB)
+0029.073 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 2700 files added (on-disk size: 15260.9 KB)
+0029.125 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 2800 files added (on-disk size: 15260.9 KB)
+0029.217 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 2900 files added (on-disk size: 15260.9 KB)
+0029.273 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 3000 files added (on-disk size: 15260.9 KB)
+0029.283 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (5 MB, 27812 files batched, 501 (3007) added so far); re-opening (prior size: 15260.9 KB)
+0031.867 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 3100 files added (on-disk size: 16798.7 KB)
+0031.954 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 3200 files added (on-disk size: 16798.7 KB)
+0032.069 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 3300 files added (on-disk size: 16798.7 KB)
+0032.188 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 3400 files added (on-disk size: 16798.7 KB)
+0032.306 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 3500 files added (on-disk size: 16798.7 KB)
+0032.340 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.7 MB, 27812 files batched, 501 (3508) added so far); re-opening (prior size: 16798.7 KB)
+0034.009 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 3600 files added (on-disk size: 17636.2 KB)
+0034.095 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 3700 files added (on-disk size: 17636.2 KB)
+0034.132 (0) [Warning] A very large file was encountered: channels/site/archive.tar.gz (size: 354.2 Mb)
+0034.143 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (362 MB, 27812 files batched, 211 (3719) added so far); re-opening (prior size: 17636.2 KB)
+0066.924 (0) A useful amount of data was added after this amount of zip processing: 33.9 s (normalised: 2.3 s, rate: 10944.6 KB/s)
+0066.935 (0) Performance is good - will increase the amount of data we attempt to batch (time=33.873584985733, normalised_time=2.3390552322999, max_time=-1, data points known=0, old_max_bytes=26214400, new_max_bytes=67243559)
+0067.038 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 3800 files added (on-disk size: 387884.4 KB)
+0067.153 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 3900 files added (on-disk size: 387884.4 KB)
+0067.260 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 4000 files added (on-disk size: 387884.4 KB)
+0067.377 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 4100 files added (on-disk size: 387884.4 KB)
+0067.439 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 4200 files added (on-disk size: 387884.4 KB)
+0067.456 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4.5 MB, 27812 files batched, 501 (4220) added so far); re-opening (prior size: 387884.4 KB)
+0086.743 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 4300 files added (on-disk size: 392393.5 KB)
+0086.888 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 4400 files added (on-disk size: 392393.5 KB)
+0087.107 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 4500 files added (on-disk size: 392393.5 KB)
+0087.330 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 4600 files added (on-disk size: 392393.5 KB)
+0087.524 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 4700 files added (on-disk size: 392393.5 KB)
+0087.562 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (6.7 MB, 27812 files batched, 501 (4721) added so far); re-opening (prior size: 392393.5 KB)
+0107.184 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 4800 files added (on-disk size: 398928.4 KB)
+0107.253 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 4900 files added (on-disk size: 398928.4 KB)
+0107.324 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 5000 files added (on-disk size: 398928.4 KB)
+0107.396 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip.tmp: 5100 files added (on-disk size: 398928.4 KB)
+0107.448 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): possibly approaching split limit (9.9 MB, 449 (5170) files added so far); last ratio: 0.9535; re-opening (prior size: 398928.4 KB)
+0124.091 (0) Zip size is at/near split limit (398.9 MB / 400 MB) - bumping index (from: 0)
+0130.683 (0) Created others zip (0) - 408442.3 KB in 108.2 s (3774.1 KB/s) (SHA1 checksum: 556ef04ab7bbe60664ba051dd7926c4904a01611)
+0130.693 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (5171) files added so far); re-opening (prior size: 0 KB)
+0130.735 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 5200 files added (on-disk size: 23.8 KB)
+0130.785 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 5300 files added (on-disk size: 23.8 KB)
+0130.809 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 5400 files added (on-disk size: 23.8 KB)
+0130.826 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 5500 files added (on-disk size: 23.8 KB)
+0130.840 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 5600 files added (on-disk size: 23.8 KB)
+0130.852 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (11.3 MB, 27812 files batched, 501 (5672) added so far); re-opening (prior size: 23.8 KB)
+0134.383 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 5700 files added (on-disk size: 10785.1 KB)
+0134.399 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 5800 files added (on-disk size: 10785.1 KB)
+0134.419 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 5900 files added (on-disk size: 10785.1 KB)
+0134.437 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 6000 files added (on-disk size: 10785.1 KB)
+0134.456 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 6100 files added (on-disk size: 10785.1 KB)
+0134.471 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (11.1 MB, 27812 files batched, 501 (6173) added so far); re-opening (prior size: 10785.1 KB)
+0138.196 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 6200 files added (on-disk size: 21452.5 KB)
+0138.230 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 6300 files added (on-disk size: 21452.5 KB)
+0138.257 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 6400 files added (on-disk size: 21452.5 KB)
+0138.349 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 6500 files added (on-disk size: 21452.5 KB)
+0138.385 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 6600 files added (on-disk size: 21452.5 KB)
+0138.405 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (10.8 MB, 27812 files batched, 501 (6674) added so far); re-opening (prior size: 21452.5 KB)
+0141.783 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 6700 files added (on-disk size: 31780.8 KB)
+0141.810 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 6800 files added (on-disk size: 31780.8 KB)
+0141.837 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 6900 files added (on-disk size: 31780.8 KB)
+0141.864 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 7000 files added (on-disk size: 31780.8 KB)
+0141.892 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 7100 files added (on-disk size: 31780.8 KB)
+0141.914 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (10.6 MB, 27812 files batched, 501 (7175) added so far); re-opening (prior size: 31780.8 KB)
+0145.769 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 7200 files added (on-disk size: 41961.4 KB)
+0145.804 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 7300 files added (on-disk size: 41961.4 KB)
+0145.840 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 7400 files added (on-disk size: 41961.4 KB)
+0145.889 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 7500 files added (on-disk size: 41961.4 KB)
+0145.924 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 7600 files added (on-disk size: 41961.4 KB)
+0146.021 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (10.2 MB, 27812 files batched, 501 (7676) added so far); re-opening (prior size: 41961.4 KB)
+0150.161 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 7700 files added (on-disk size: 51770.6 KB)
+0150.217 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 7800 files added (on-disk size: 51770.6 KB)
+0150.302 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 7900 files added (on-disk size: 51770.6 KB)
+0150.351 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 8000 files added (on-disk size: 51770.6 KB)
+0150.402 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 8100 files added (on-disk size: 51770.6 KB)
+0150.432 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (7.2 MB, 27812 files batched, 501 (8177) added so far); re-opening (prior size: 51770.6 KB)
+0156.146 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 8200 files added (on-disk size: 59076.4 KB)
+0156.186 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 8300 files added (on-disk size: 59076.4 KB)
+0156.228 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 8400 files added (on-disk size: 59076.4 KB)
+0156.272 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 8500 files added (on-disk size: 59076.4 KB)
+0156.320 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 8600 files added (on-disk size: 59076.4 KB)
+0156.357 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (16.8 MB, 27812 files batched, 501 (8678) added so far); re-opening (prior size: 59076.4 KB)
+0162.443 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 8700 files added (on-disk size: 76227.4 KB)
+0162.492 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 8800 files added (on-disk size: 76227.4 KB)
+0162.584 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 8900 files added (on-disk size: 76227.4 KB)
+0162.636 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 9000 files added (on-disk size: 76227.4 KB)
+0162.687 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 9100 files added (on-disk size: 76227.4 KB)
+0162.729 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (16.2 MB, 27812 files batched, 501 (9179) added so far); re-opening (prior size: 76227.4 KB)
+0169.921 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 9200 files added (on-disk size: 92820.3 KB)
+0169.981 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 9300 files added (on-disk size: 92820.3 KB)
+0170.039 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 9400 files added (on-disk size: 92820.3 KB)
+0170.095 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 9500 files added (on-disk size: 92820.3 KB)
+0170.151 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 9600 files added (on-disk size: 92820.3 KB)
+0170.222 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (15.9 MB, 27812 files batched, 501 (9680) added so far); re-opening (prior size: 92820.3 KB)
+0177.728 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 9700 files added (on-disk size: 109008 KB)
+0177.852 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 9800 files added (on-disk size: 109008 KB)
+0177.954 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 9900 files added (on-disk size: 109008 KB)
+0178.013 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 10000 files added (on-disk size: 109008 KB)
+0178.079 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 10100 files added (on-disk size: 109008 KB)
+0178.181 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (15.8 MB, 27812 files batched, 501 (10181) added so far); re-opening (prior size: 109008 KB)
+0185.584 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 10200 files added (on-disk size: 125123.3 KB)
+0185.685 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 10300 files added (on-disk size: 125123.3 KB)
+0185.766 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 10400 files added (on-disk size: 125123.3 KB)
+0185.884 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 10500 files added (on-disk size: 125123.3 KB)
+0185.976 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 10600 files added (on-disk size: 125123.3 KB)
+0186.157 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4.3 MB, 27812 files batched, 501 (10682) added so far); re-opening (prior size: 125123.3 KB)
+0192.551 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 10700 files added (on-disk size: 129414.2 KB)
+0192.639 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 10800 files added (on-disk size: 129414.2 KB)
+0192.736 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 10900 files added (on-disk size: 129414.2 KB)
+0192.833 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 11000 files added (on-disk size: 129414.2 KB)
+0192.926 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 11100 files added (on-disk size: 129414.2 KB)
+0192.985 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4.4 MB, 27812 files batched, 501 (11183) added so far); re-opening (prior size: 129414.2 KB)
+0199.244 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 11200 files added (on-disk size: 133728.2 KB)
+0199.323 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 11300 files added (on-disk size: 133728.2 KB)
+0199.395 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 11400 files added (on-disk size: 133728.2 KB)
+0199.479 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 11500 files added (on-disk size: 133728.2 KB)
+0199.560 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 11600 files added (on-disk size: 133728.2 KB)
+0199.632 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4.6 MB, 27812 files batched, 501 (11684) added so far); re-opening (prior size: 133728.2 KB)
+0206.515 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 11700 files added (on-disk size: 138231.7 KB)
+0206.612 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 11800 files added (on-disk size: 138231.7 KB)
+0206.686 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 11900 files added (on-disk size: 138231.7 KB)
+0206.761 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 12000 files added (on-disk size: 138231.7 KB)
+0206.836 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 12100 files added (on-disk size: 138231.7 KB)
+0206.904 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4.4 MB, 27812 files batched, 501 (12185) added so far); re-opening (prior size: 138231.7 KB)
+0214.247 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 12200 files added (on-disk size: 142657.5 KB)
+0214.364 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 12300 files added (on-disk size: 142657.5 KB)
+0214.579 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 12400 files added (on-disk size: 142657.5 KB)
+0214.756 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 12500 files added (on-disk size: 142657.5 KB)
+0214.861 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 12600 files added (on-disk size: 142657.5 KB)
+0215.015 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4.6 MB, 27812 files batched, 501 (12686) added so far); re-opening (prior size: 142657.5 KB)
+0221.961 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 12700 files added (on-disk size: 147135.6 KB)
+0222.082 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 12800 files added (on-disk size: 147135.6 KB)
+0222.238 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 12900 files added (on-disk size: 147135.6 KB)
+0222.413 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 13000 files added (on-disk size: 147135.6 KB)
+0222.608 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 13100 files added (on-disk size: 147135.6 KB)
+0222.750 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4.1 MB, 27812 files batched, 501 (13187) added so far); re-opening (prior size: 147135.6 KB)
+0230.764 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 13200 files added (on-disk size: 151241.3 KB)
+0230.942 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 13300 files added (on-disk size: 151241.3 KB)
+0231.097 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 13400 files added (on-disk size: 151241.3 KB)
+0231.305 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 13500 files added (on-disk size: 151241.3 KB)
+0231.465 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 13600 files added (on-disk size: 151241.3 KB)
+0231.627 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (9.2 MB, 27812 files batched, 501 (13688) added so far); re-opening (prior size: 151241.3 KB)
+0241.314 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 13700 files added (on-disk size: 160630 KB)
+0241.436 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 13800 files added (on-disk size: 160630 KB)
+0241.558 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 13900 files added (on-disk size: 160630 KB)
+0241.680 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 14000 files added (on-disk size: 160630 KB)
+0241.804 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 14100 files added (on-disk size: 160630 KB)
+0241.916 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (19.3 MB, 27812 files batched, 501 (14189) added so far); re-opening (prior size: 160630 KB)
+0251.510 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 14200 files added (on-disk size: 180451.7 KB)
+0251.616 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 14300 files added (on-disk size: 180451.7 KB)
+0251.732 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 14400 files added (on-disk size: 180451.7 KB)
+0251.842 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 14500 files added (on-disk size: 180451.7 KB)
+0251.956 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 14600 files added (on-disk size: 180451.7 KB)
+0252.060 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (19.3 MB, 27812 files batched, 501 (14690) added so far); re-opening (prior size: 180451.7 KB)
+0261.895 (0) The scheduled resumption is within 45 seconds - will reschedule
+0261.906 (0) Rescheduling resumption 1: moving to 345 seconds from now (1486365099)
+0261.943 (0) To decrease the likelihood of overlaps, increasing resumption interval to: 300 + 45 = 345
+0262.049 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 14700 files added (on-disk size: 200246.7 KB)
+0262.221 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 14800 files added (on-disk size: 200246.7 KB)
+0262.344 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 14900 files added (on-disk size: 200246.7 KB)
+0262.551 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 15000 files added (on-disk size: 200246.7 KB)
+0262.658 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 15100 files added (on-disk size: 200246.7 KB)
+0262.803 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (19.2 MB, 27812 files batched, 501 (15191) added so far); re-opening (prior size: 200246.7 KB)
+0273.265 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 15200 files added (on-disk size: 219957.2 KB)
+0273.379 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 15300 files added (on-disk size: 219957.2 KB)
+0273.490 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 15400 files added (on-disk size: 219957.2 KB)
+0273.631 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 15500 files added (on-disk size: 219957.2 KB)
+0273.859 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 15600 files added (on-disk size: 219957.2 KB)
+0274.092 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (19.9 MB, 27812 files batched, 501 (15692) added so far); re-opening (prior size: 219957.2 KB)
+0286.920 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 15700 files added (on-disk size: 240313 KB)
+0287.227 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 15800 files added (on-disk size: 240313 KB)
+0287.367 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 15900 files added (on-disk size: 240313 KB)
+0287.523 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 16000 files added (on-disk size: 240313 KB)
+0287.647 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 16100 files added (on-disk size: 240313 KB)
+0287.769 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (19.1 MB, 27812 files batched, 501 (16193) added so far); re-opening (prior size: 240313 KB)
+0299.341 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 16200 files added (on-disk size: 259879.9 KB)
+0299.526 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 16300 files added (on-disk size: 259879.9 KB)
+0299.683 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 16400 files added (on-disk size: 259879.9 KB)
+0299.815 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 16500 files added (on-disk size: 259879.9 KB)
+0300.023 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 16600 files added (on-disk size: 259879.9 KB)
+0300.531 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (16.8 MB, 27812 files batched, 501 (16694) added so far); re-opening (prior size: 259879.9 KB)
+0313.355 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 16700 files added (on-disk size: 277015.9 KB)
+0313.771 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 16800 files added (on-disk size: 277015.9 KB)
+0314.258 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 16900 files added (on-disk size: 277015.9 KB)
+0314.559 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 17000 files added (on-disk size: 277015.9 KB)
+0314.817 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 17100 files added (on-disk size: 277015.9 KB)
+0314.982 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4.2 MB, 27812 files batched, 501 (17195) added so far); re-opening (prior size: 277015.9 KB)
+0325.882 (0) The time we have been running (325.9) is approaching the resumption interval (345) - increasing resumption interval to 356
+0326.028 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 17200 files added (on-disk size: 281179.7 KB)
+0326.576 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 17300 files added (on-disk size: 281179.7 KB)
+0326.807 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 17400 files added (on-disk size: 281179.7 KB)
+0327.031 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 17500 files added (on-disk size: 281179.7 KB)
+0327.327 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 17600 files added (on-disk size: 281179.7 KB)
+0327.540 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4.5 MB, 27812 files batched, 501 (17696) added so far); re-opening (prior size: 281179.7 KB)
+0339.618 (0) The time we have been running (339.6) is approaching the resumption interval (356) - increasing resumption interval to 370
+0339.749 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 17700 files added (on-disk size: 285694.1 KB)
+0340.114 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 17800 files added (on-disk size: 285694.1 KB)
+0340.404 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 17900 files added (on-disk size: 285694.1 KB)
+0340.751 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 18000 files added (on-disk size: 285694.1 KB)
+0341.081 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 18100 files added (on-disk size: 285694.1 KB)
+0341.363 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4.2 MB, 27812 files batched, 501 (18197) added so far); re-opening (prior size: 285694.1 KB)
+0352.943 (0) The time we have been running (352.9) is approaching the resumption interval (370) - increasing resumption interval to 383
+0353.077 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 18200 files added (on-disk size: 289886.1 KB)
+0353.622 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 18300 files added (on-disk size: 289886.1 KB)
+0354.017 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 18400 files added (on-disk size: 289886.1 KB)
+0354.354 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 18500 files added (on-disk size: 289886.1 KB)
+0354.641 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 18600 files added (on-disk size: 289886.1 KB)
+0354.877 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4.3 MB, 27812 files batched, 501 (18698) added so far); re-opening (prior size: 289886.1 KB)
+0366.453 (0) The time we have been running (366.4) is approaching the resumption interval (383) - increasing resumption interval to 397
+0366.571 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 18700 files added (on-disk size: 294103.3 KB)
+0367.033 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 18800 files added (on-disk size: 294103.3 KB)
+0367.311 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 18900 files added (on-disk size: 294103.3 KB)
+0367.562 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 19000 files added (on-disk size: 294103.3 KB)
+0367.752 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 19100 files added (on-disk size: 294103.3 KB)
+0367.939 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4.3 MB, 27812 files batched, 501 (19199) added so far); re-opening (prior size: 294103.3 KB)
+0380.748 (0) The time we have been running (380.7) is approaching the resumption interval (397) - increasing resumption interval to 411
+0380.850 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 19200 files added (on-disk size: 298389.5 KB)
+0381.258 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 19300 files added (on-disk size: 298389.5 KB)
+0381.518 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 19400 files added (on-disk size: 298389.5 KB)
+0381.792 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 19500 files added (on-disk size: 298389.5 KB)
+0381.995 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 19600 files added (on-disk size: 298389.5 KB)
+0382.251 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4 MB, 27812 files batched, 501 (19700) added so far); re-opening (prior size: 298389.5 KB)
+0394.879 (0) The time we have been running (394.8) is approaching the resumption interval (411) - increasing resumption interval to 425
+0394.893 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 19700 files added (on-disk size: 302306.7 KB)
+0395.438 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 19800 files added (on-disk size: 302306.7 KB)
+0395.942 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 19900 files added (on-disk size: 302306.7 KB)
+0396.251 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 20000 files added (on-disk size: 302306.7 KB)
+0396.587 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 20100 files added (on-disk size: 302306.7 KB)
+0396.776 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 20200 files added (on-disk size: 302306.7 KB)
+0396.781 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4.1 MB, 27812 files batched, 501 (20201) added so far); re-opening (prior size: 302306.7 KB)
+0409.961 (0) The time we have been running (409.9) is approaching the resumption interval (425) - increasing resumption interval to 440
+0410.479 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 20300 files added (on-disk size: 306396.8 KB)
+0410.872 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 20400 files added (on-disk size: 306396.8 KB)
+0411.215 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 20500 files added (on-disk size: 306396.8 KB)
+0411.440 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 20600 files added (on-disk size: 306396.8 KB)
+0411.647 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 20700 files added (on-disk size: 306396.8 KB)
+0411.657 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4.4 MB, 27812 files batched, 501 (20702) added so far); re-opening (prior size: 306396.8 KB)
+0425.532 (0) The time we have been running (425.5) is approaching the resumption interval (440) - increasing resumption interval to 456
+0426.116 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 20800 files added (on-disk size: 310707.1 KB)
+0426.452 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 20900 files added (on-disk size: 310707.1 KB)
+0426.675 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 21000 files added (on-disk size: 310707.1 KB)
+0426.860 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 21100 files added (on-disk size: 310707.1 KB)
+0427.087 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 21200 files added (on-disk size: 310707.1 KB)
+0427.105 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4.4 MB, 27812 files batched, 501 (21203) added so far); re-opening (prior size: 310707.1 KB)
+0440.458 (0) The time we have been running (440.4) is approaching the resumption interval (456) - increasing resumption interval to 471
+0440.959 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 21300 files added (on-disk size: 315132.2 KB)
+0441.235 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 21400 files added (on-disk size: 315132.2 KB)
+0441.503 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 21500 files added (on-disk size: 315132.2 KB)
+0441.699 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 21600 files added (on-disk size: 315132.2 KB)
+0441.929 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 21700 files added (on-disk size: 315132.2 KB)
+0441.944 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4.6 MB, 27812 files batched, 501 (21704) added so far); re-opening (prior size: 315132.2 KB)
+0456.163 (0) The time we have been running (456.1) is approaching the resumption interval (471) - increasing resumption interval to 487
+0456.698 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 21800 files added (on-disk size: 319737.4 KB)
+0457.048 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 21900 files added (on-disk size: 319737.4 KB)
+0457.307 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 22000 files added (on-disk size: 319737.4 KB)
+0457.535 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 22100 files added (on-disk size: 319737.4 KB)
+0457.731 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 22200 files added (on-disk size: 319737.4 KB)
+0457.772 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2.7 MB, 27812 files batched, 501 (22205) added so far); re-opening (prior size: 319737.4 KB)
+0470.691 (0) The time we have been running (470.7) is approaching the resumption interval (487) - increasing resumption interval to 501
+0471.186 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 22300 files added (on-disk size: 322509 KB)
+0471.469 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 22400 files added (on-disk size: 322509 KB)
+0471.666 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 22500 files added (on-disk size: 322509 KB)
+0471.854 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 22600 files added (on-disk size: 322509 KB)
+0472.035 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 22700 files added (on-disk size: 322509 KB)
+0472.056 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.9 MB, 27812 files batched, 501 (22706) added so far); re-opening (prior size: 322509 KB)
+0483.521 (0) The time we have been running (483.5) is approaching the resumption interval (501) - increasing resumption interval to 514
+0483.939 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 22800 files added (on-disk size: 324558 KB)
+0484.140 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 22900 files added (on-disk size: 324558 KB)
+0484.499 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 23000 files added (on-disk size: 324558 KB)
+0484.939 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 23100 files added (on-disk size: 324558 KB)
+0485.184 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 23200 files added (on-disk size: 324558 KB)
+0485.207 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.9 MB, 27812 files batched, 501 (23207) added so far); re-opening (prior size: 324558 KB)
+0495.525 (0) The time we have been running (495.5) is approaching the resumption interval (514) - increasing resumption interval to 526
+0495.860 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 23300 files added (on-disk size: 326573.2 KB)
+0496.058 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 23400 files added (on-disk size: 326573.2 KB)
+0496.284 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 23500 files added (on-disk size: 326573.2 KB)
+0496.504 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 23600 files added (on-disk size: 326573.2 KB)
+0496.695 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 23700 files added (on-disk size: 326573.2 KB)
+0496.744 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.9 MB, 27812 files batched, 501 (23708) added so far); re-opening (prior size: 326573.2 KB)
+0509.035 (0) The time we have been running (509) is approaching the resumption interval (526) - increasing resumption interval to 540
+0509.821 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 23800 files added (on-disk size: 328643.5 KB)
+0510.423 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 23900 files added (on-disk size: 328643.5 KB)
+0510.726 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 24000 files added (on-disk size: 328643.5 KB)
+0510.958 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 24100 files added (on-disk size: 328643.5 KB)
+0511.052 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.6 MB, 422 (24130) files added so far); re-opening (prior size: 328643.5 KB)
+0524.690 (0) The time we have been running (524.7) is approaching the resumption interval (540) - increasing resumption interval to 555
+0525.113 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 24200 files added (on-disk size: 330400.3 KB)
+0525.517 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 24300 files added (on-disk size: 330400.3 KB)
+0526.018 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 24400 files added (on-disk size: 330400.3 KB)
+0526.471 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 24500 files added (on-disk size: 330400.3 KB)
+0526.882 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 24600 files added (on-disk size: 330400.3 KB)
+0526.985 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.9 MB, 27812 files batched, 501 (24631) added so far); re-opening (prior size: 330400.3 KB)
+0543.819 (0) The time we have been running (543.8) is approaching the resumption interval (555) - increasing resumption interval to 574
+0544.234 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 24700 files added (on-disk size: 332448.6 KB)
+0544.668 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 24800 files added (on-disk size: 332448.6 KB)
+0545.218 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 24900 files added (on-disk size: 332448.6 KB)
+0545.737 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 25000 files added (on-disk size: 332448.6 KB)
+0546.055 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (2.6 MB, 444 (25075) files added so far); re-opening (prior size: 332448.6 KB)
+0561.654 (0) The time we have been running (561.6) is approaching the resumption interval (574) - increasing resumption interval to 592
+0561.663 (0) The scheduled resumption is within 45 seconds - will reschedule
+0561.671 (0) Rescheduling resumption 1: moving to 637 seconds from now (1486365691)
+0561.739 (0) To decrease the likelihood of overlaps, increasing resumption interval to: 592 + 45 = 637
+0562.015 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 25100 files added (on-disk size: 335115.3 KB)
+0562.469 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 25200 files added (on-disk size: 335115.3 KB)
+0562.814 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 25300 files added (on-disk size: 335115.3 KB)
+0563.188 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 25400 files added (on-disk size: 335115.3 KB)
+0563.496 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 25500 files added (on-disk size: 335115.3 KB)
+0563.831 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4.2 MB, 27812 files batched, 501 (25576) added so far); re-opening (prior size: 335115.3 KB)
+0580.221 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 25600 files added (on-disk size: 339324.6 KB)
+0580.717 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 25700 files added (on-disk size: 339324.6 KB)
+0581.192 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 25800 files added (on-disk size: 339324.6 KB)
+0581.590 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 25900 files added (on-disk size: 339324.6 KB)
+0581.992 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 26000 files added (on-disk size: 339324.6 KB)
+0582.055 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (3.6 MB, 432 (26008) files added so far); re-opening (prior size: 339324.6 KB)
+0600.338 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 26100 files added (on-disk size: 342867.7 KB)
+0600.624 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 26200 files added (on-disk size: 342867.7 KB)
+0600.877 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 26300 files added (on-disk size: 342867.7 KB)
+0601.133 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 26400 files added (on-disk size: 342867.7 KB)
+0601.398 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 26500 files added (on-disk size: 342867.7 KB)
+0601.428 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2.9 MB, 27812 files batched, 501 (26509) added so far); re-opening (prior size: 342867.7 KB)
+0613.739 (0) The time we have been running (613.7) is approaching the resumption interval (637) - increasing resumption interval to 644
+0614.134 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 26600 files added (on-disk size: 345627.9 KB)
+0614.388 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 26700 files added (on-disk size: 345627.9 KB)
+0614.675 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 26800 files added (on-disk size: 345627.9 KB)
+0614.933 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 26900 files added (on-disk size: 345627.9 KB)
+0615.186 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 27000 files added (on-disk size: 345627.9 KB)
+0615.220 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2.8 MB, 27812 files batched, 501 (27010) added so far); re-opening (prior size: 345627.9 KB)
+0629.433 (0) The time we have been running (629.4) is approaching the resumption interval (644) - increasing resumption interval to 660
+0630.086 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 27100 files added (on-disk size: 348099.9 KB)
+0630.350 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 27200 files added (on-disk size: 348099.9 KB)
+0630.615 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 27300 files added (on-disk size: 348099.9 KB)
+0630.872 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 27400 files added (on-disk size: 348099.9 KB)
+0631.138 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 27500 files added (on-disk size: 348099.9 KB)
+0631.195 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.5 MB, 27812 files batched, 501 (27511) added so far); re-opening (prior size: 348099.9 KB)
+0644.845 (0) The time we have been running (644.8) is approaching the resumption interval (660) - increasing resumption interval to 675
+0645.224 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 27600 files added (on-disk size: 349657.3 KB)
+0645.486 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 27700 files added (on-disk size: 349657.3 KB)
+0645.805 (0) Zip: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip.tmp: 27800 files added (on-disk size: 349657.3 KB)
+0659.938 (0) The time we have been running (659.9) is approaching the resumption interval (675) - increasing resumption interval to 690
+0664.365 (0) Created others zip (1) - 350408 KB in 533.7 s (656.6 KB/s) (SHA1 checksum: 83b04819c8a7bea702a86eba9de502689ac0658c)
+0664.418 (0) Saving backup status to database (elements: 9)
+0664.438 (0) Beginning creation of database dump (WordPress DB)
+0664.452 (0) Testing: /usr/bin/mysqldump
+0664.892 (0) Output: /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;\n/*!40103 SET TIME_ZONE='+00:00' */;\n/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;\n/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;\n/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;\n/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;\nDROP TABLE IF EXISTS `wp_options`;\n/*!40101 SET @saved_cs_client     = @@character_set_client */;\n/*!40101 SET character_set_client = utf8 */;\nCRE (truncated - 1192 bytes total)
+0664.904 (0) Working binary mysqldump found: /usr/bin/mysqldump
+0665.070 (0) Table wp_options: Total expected rows (approximate): 407
+0665.142 (0) Table wp_options: Total rows added: 260 in 0.06 seconds
+0665.147 (0) Table wp_options: finishing file (backup_2017-02-06-0701_GolfReview_3b358ebda362-db-table-wp_options.table.gz - 24.7 KB)
+0665.164 (0) The time we have been running (665.2) is approaching the resumption interval (690) - increasing resumption interval to 696
+0665.188 (0) Table wp_users: Total expected rows (approximate): 8
+0665.204 (0) Table wp_users: Total rows added: 8 in 0.01 seconds
+0665.211 (0) Table wp_users: finishing file (backup_2017-02-06-0701_GolfReview_3b358ebda362-db-table-wp_users.table.gz - 0.8 KB)
+0665.237 (0) Table wp_usermeta: Total expected rows (approximate): 44
+0665.254 (0) Table wp_usermeta: Total rows added: 44 in 0.01 seconds
+0665.261 (0) Table wp_usermeta: finishing file (backup_2017-02-06-0701_GolfReview_3b358ebda362-db-table-wp_usermeta.table.gz - 1.3 KB)
+0665.304 (0) Table wp_commentmeta: Total expected rows (approximate): 0
+0665.330 (0) Table wp_commentmeta: Total rows added: 0 in 0.01 seconds
+0665.336 (0) Table wp_commentmeta: finishing file (backup_2017-02-06-0701_GolfReview_3b358ebda362-db-table-wp_commentmeta.table.gz - 0.4 KB)
+0665.359 (0) Table wp_comments: Total expected rows (approximate): 24
+0665.382 (0) Table wp_comments: Total rows added: 24 in 0.02 seconds
+0665.390 (0) Table wp_comments: finishing file (backup_2017-02-06-0701_GolfReview_3b358ebda362-db-table-wp_comments.table.gz - 1.6 KB)
+0665.414 (0) Table wp_links: Total expected rows (approximate): 7
+0665.431 (0) Table wp_links: Total rows added: 7 in 0.01 seconds
+0665.437 (0) Table wp_links: finishing file (backup_2017-02-06-0701_GolfReview_3b358ebda362-db-table-wp_links.table.gz - 0.6 KB)
+0665.482 (0) Table wp_postmeta: Total expected rows (approximate): 313
+0665.517 (0) Table wp_postmeta: Total rows added: 253 in 0.03 seconds
+0665.521 (0) Table wp_postmeta: finishing file (backup_2017-02-06-0701_GolfReview_3b358ebda362-db-table-wp_postmeta.table.gz - 3.1 KB)
+0665.540 (0) Table wp_posts: Total expected rows (approximate): 83
+0665.595 (0) Table wp_posts: Total rows added: 65 in 0.05 seconds
+0665.601 (0) Table wp_posts: finishing file (backup_2017-02-06-0701_GolfReview_3b358ebda362-db-table-wp_posts.table.gz - 4 KB)
+0665.620 (0) Table wp_term_relationships: Total expected rows (approximate): 49
+0665.633 (0) Table wp_term_relationships: Total rows added: 49 in 0.01 seconds
+0665.640 (0) Table wp_term_relationships: finishing file (backup_2017-02-06-0701_GolfReview_3b358ebda362-db-table-wp_term_relationships.table.gz - 0.5 KB)
+0665.658 (0) Table wp_term_taxonomy: Total expected rows (approximate): 436
+0665.707 (0) Table wp_term_taxonomy: Total rows added: 472 in 0.04 seconds
+0665.711 (0) Table wp_term_taxonomy: finishing file (backup_2017-02-06-0701_GolfReview_3b358ebda362-db-table-wp_term_taxonomy.table.gz - 5.7 KB)
+0665.727 (0) Table wp_termmeta: Total expected rows (approximate): 0
+0665.742 (0) Table wp_termmeta: Total rows added: 0 in 0.01 seconds
+0665.748 (0) Table wp_termmeta: finishing file (backup_2017-02-06-0701_GolfReview_3b358ebda362-db-table-wp_termmeta.table.gz - 0.4 KB)
+0665.770 (0) Table wp_terms: Total expected rows (approximate): 829
+0665.820 (0) Table wp_terms: Total rows added: 472 in 0.04 seconds
+0665.824 (0) Table wp_terms: finishing file (backup_2017-02-06-0701_GolfReview_3b358ebda362-db-table-wp_terms.table.gz - 6.3 KB)
+0665.832 (0) Skipping table (lacks our prefix (wp_)): esatags
+0665.838 (0) Skipping table (lacks our prefix (wp_)): golfreview_article_queue
+0665.841 (0) Skipping table (lacks our prefix (wp_)): golfreview_queue_set
+0665.846 (0) Skipping table (lacks our prefix (wp_)): site_review_article_queue
+0665.850 (0) Skipping table (lacks our prefix (wp_)): site_review_queue_set
+0665.870 (0) backup_2017-02-06-0701_GolfReview_3b358ebda362-db-table-wp_options.table.gz (1/17): adding to final database dump
+0665.897 (0) backup_2017-02-06-0701_GolfReview_3b358ebda362-db-table-wp_users.table.gz (2/17): adding to final database dump
+0665.901 (0) backup_2017-02-06-0701_GolfReview_3b358ebda362-db-table-wp_usermeta.table.gz (3/17): adding to final database dump
+0665.908 (0) backup_2017-02-06-0701_GolfReview_3b358ebda362-db-table-wp_commentmeta.table.gz (4/17): adding to final database dump
+0665.912 (0) backup_2017-02-06-0701_GolfReview_3b358ebda362-db-table-wp_comments.table.gz (5/17): adding to final database dump
+0665.917 (0) backup_2017-02-06-0701_GolfReview_3b358ebda362-db-table-wp_links.table.gz (6/17): adding to final database dump
+0665.922 (0) backup_2017-02-06-0701_GolfReview_3b358ebda362-db-table-wp_postmeta.table.gz (7/17): adding to final database dump
+0665.932 (0) backup_2017-02-06-0701_GolfReview_3b358ebda362-db-table-wp_posts.table.gz (8/17): adding to final database dump
+0665.941 (0) backup_2017-02-06-0701_GolfReview_3b358ebda362-db-table-wp_term_relationships.table.gz (9/17): adding to final database dump
+0665.949 (0) backup_2017-02-06-0701_GolfReview_3b358ebda362-db-table-wp_term_taxonomy.table.gz (10/17): adding to final database dump
+0665.980 (0) backup_2017-02-06-0701_GolfReview_3b358ebda362-db-table-wp_termmeta.table.gz (11/17): adding to final database dump
+0665.987 (0) backup_2017-02-06-0701_GolfReview_3b358ebda362-db-table-wp_terms.table.gz (12/17): adding to final database dump
+0666.012 (0) backup_2017-02-06-0701_GolfReview_3b358ebda362-db.gz: finished writing out complete database file (16 KB)
+0666.043 (0) Total database tables backed up: 12 (backup_2017-02-06-0701_GolfReview_3b358ebda362-db.gz, size: 47397, checksum (SHA1): 8f04cc725cccb40639f2149b3d0f4c87b7fa1d14)
+0666.082 (0) backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0666.094 (0) backup_2017-02-06-0701_GolfReview_3b358ebda362-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0666.101 (0) backup_2017-02-06-0701_GolfReview_3b358ebda362-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0666.106 (0) backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip: others: This file has not yet been successfully uploaded: will queue
+0666.110 (0) backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip: others: This file has not yet been successfully uploaded: will queue
+0666.118 (0) backup_2017-02-06-0701_GolfReview_3b358ebda362-db.gz: db: This file has not yet been successfully uploaded: will queue
+0666.123 (0) Saving backup history. Total backup size: 767 MB
+0666.144 (0) Requesting upload of the files that have not yet been successfully uploaded (6)
+0666.163 (0) Cloud backup selection (1/1): s3 (last)
+0666.183 (0) Beginning dispatch of backup to remote (s3)
+0667.399 (0) S3 upload (): backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip (chunks: 5) -> s3://golfreviewupdraft/backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip
+0667.745 (0) S3 chunked upload: got multipart ID: 3udnzDizTQADTNx_4jywjIYvUqgaV9m1FcnP7CfOzkUbCuG6pjBH9W7S2c_8QEhbuJnnfNk7szEFCavtLJiOWbMDESaynGZJFDRjZJWQRoIivo5ku1ZXYFIeLbWF5kQ8
+0668.920 (0) The time we have been running (668.9) is approaching the resumption interval (696) - increasing resumption interval to 699
+0668.932 (0) S3 chunked upload: 20 % uploaded (1, "472046490d6f6057dfa87267f49fad89")
+0670.202 (0) The time we have been running (670.2) is approaching the resumption interval (699) - increasing resumption interval to 701
+0670.236 (0) S3 chunked upload: 40 % uploaded (2, "f26a4c76969203bd6628a51ef5749b17")
+0671.309 (0) The time we have been running (671.3) is approaching the resumption interval (701) - increasing resumption interval to 702
+0671.321 (0) S3 chunked upload: 60 % uploaded (3, "6bbf377e43dd61e5db91d8b8579ff3b9")
+0672.499 (0) The time we have been running (672.5) is approaching the resumption interval (702) - increasing resumption interval to 703
+0672.511 (0) S3 chunked upload: 80 % uploaded (4, "3d667d319c1ea02a9acbcaf687f338de")
+0673.282 (0) The time we have been running (673.3) is approaching the resumption interval (703) - increasing resumption interval to 704
+0673.293 (0) S3 chunked upload: 100 % uploaded (5, "d985d794365ce9729674535258d52147")
+0673.311 (0) S3 upload: all chunks uploaded; will now instruct S3 to re-assemble
+0673.693 (0) S3 upload (plugins0): re-assembly succeeded
+0673.703 (0) Recording as successfully uploaded: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip (9ef185a87664972c5439a45ffcf79f4f)
+0673.734 (0) Deleting local file: backup_2017-02-06-0701_GolfReview_3b358ebda362-plugins.zip: OK
+0673.738 (0) S3 upload (): backup_2017-02-06-0701_GolfReview_3b358ebda362-themes.zip (chunks: 1) -> s3://golfreviewupdraft/backup_2017-02-06-0701_GolfReview_3b358ebda362-themes.zip
+0674.428 (0) S3 regular upload: success
+0674.444 (0) Recording as successfully uploaded: backup_2017-02-06-0701_GolfReview_3b358ebda362-themes.zip (453a0c47cb55858d4aae17eac6775bf6)
+0674.467 (0) Deleting local file: backup_2017-02-06-0701_GolfReview_3b358ebda362-themes.zip: OK
+0674.471 (0) S3 upload (): backup_2017-02-06-0701_GolfReview_3b358ebda362-uploads.zip (chunks: 1) -> s3://golfreviewupdraft/backup_2017-02-06-0701_GolfReview_3b358ebda362-uploads.zip
+0674.655 (0) S3 regular upload: success
+0674.668 (0) Recording as successfully uploaded: backup_2017-02-06-0701_GolfReview_3b358ebda362-uploads.zip (76d5bb4db95266f8c7bb436c88e2825e)
+0674.689 (0) Deleting local file: backup_2017-02-06-0701_GolfReview_3b358ebda362-uploads.zip: OK
+0674.694 (0) S3 upload (): backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip (chunks: 80) -> s3://golfreviewupdraft/backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip
+0674.782 (0) S3 chunked upload: got multipart ID: mdfsBbO9CBycGIfG1b5rtOMXRz7lPkTi.Kj3xTwLLI7ZcptnD1UX2r2YYoSUvI6nSfXVzc0DZRVGafAfYvdQiJRVXDv5D4Tr5zMlQHZZpIymoBPvUPjJigHDCgJLePF6
+0678.386 (0) The time we have been running (678.4) is approaching the resumption interval (704) - increasing resumption interval to 709
+0678.396 (0) S3 chunked upload: 1.3 % uploaded (1, "f3d646a7cfaf5135d205c2a02c905f89")
+0679.546 (0) The time we have been running (679.5) is approaching the resumption interval (709) - increasing resumption interval to 710
+0679.558 (0) S3 chunked upload: 2.5 % uploaded (2, "e023c233d7f5311b7ae3d8a3168263d6")
+0680.872 (0) The time we have been running (680.8) is approaching the resumption interval (710) - increasing resumption interval to 711
+0680.883 (0) S3 chunked upload: 3.8 % uploaded (3, "9389e5e83f6a08d8f5c2880b94461d4c")
+0681.968 (0) The time we have been running (681.9) is approaching the resumption interval (711) - increasing resumption interval to 712
+0681.979 (0) S3 chunked upload: 5 % uploaded (4, "ccbc81b67be0e2b7e6e6eb1aae7a9c44")
+0683.165 (0) The time we have been running (683.1) is approaching the resumption interval (712) - increasing resumption interval to 714
+0683.188 (0) S3 chunked upload: 6.3 % uploaded (5, "3fe6f5b45b63c56e28c4a3e751ab32e6")
+0684.459 (0) The time we have been running (684.4) is approaching the resumption interval (714) - increasing resumption interval to 715
+0684.482 (0) S3 chunked upload: 7.5 % uploaded (6, "a6f2edec23d4d5e13128484e3bdf4dcc")
+0685.606 (0) The time we have been running (685.6) is approaching the resumption interval (715) - increasing resumption interval to 716
+0685.619 (0) S3 chunked upload: 8.8 % uploaded (7, "60ed9472bacef5207f9a25e17deedcff")
+0686.695 (0) The time we have been running (686.7) is approaching the resumption interval (716) - increasing resumption interval to 717
+0686.707 (0) S3 chunked upload: 10 % uploaded (8, "a4d06b158d194bb228be258a1b66f842")
+0687.846 (0) The time we have been running (687.8) is approaching the resumption interval (717) - increasing resumption interval to 718
+0687.860 (0) S3 chunked upload: 11.3 % uploaded (9, "65cd5e287c7443dc0dc84615293351f9")
+0689.085 (0) The time we have been running (689) is approaching the resumption interval (718) - increasing resumption interval to 720
+0689.113 (0) S3 chunked upload: 12.5 % uploaded (10, "4d5d8f01c596dae7fd67d1302831b3c6")
+0690.267 (0) The time we have been running (690.2) is approaching the resumption interval (720) - increasing resumption interval to 721
+0690.279 (0) S3 chunked upload: 13.8 % uploaded (11, "ffe2a31ab5d1ec46039414531d026df5")
+0691.479 (0) The time we have been running (691.4) is approaching the resumption interval (721) - increasing resumption interval to 722
+0691.490 (0) S3 chunked upload: 15 % uploaded (12, "a44cbe861e3eab3e9c91bee4bc1cb52f")
+0692.599 (0) The time we have been running (692.6) is approaching the resumption interval (722) - increasing resumption interval to 723
+0692.610 (0) S3 chunked upload: 16.3 % uploaded (13, "7be3f799392705354d807eb6016bf8aa")
+0694.102 (0) The time we have been running (694.1) is approaching the resumption interval (723) - increasing resumption interval to 725
+0694.120 (0) S3 chunked upload: 17.5 % uploaded (14, "47a4dd5b332ecb7dd035cb3861fe3f70")
+0695.303 (0) The time we have been running (695.3) is approaching the resumption interval (725) - increasing resumption interval to 726
+0695.316 (0) S3 chunked upload: 18.8 % uploaded (15, "e289ae279d0aa5f7f2ad856aae1cdad0")
+0696.398 (0) The time we have been running (696.4) is approaching the resumption interval (726) - increasing resumption interval to 727
+0696.412 (0) S3 chunked upload: 20 % uploaded (16, "01dccd65ea9f364795b992ddfee243e9")
+0697.450 (0) The time we have been running (697.4) is approaching the resumption interval (727) - increasing resumption interval to 728
+0697.462 (0) S3 chunked upload: 21.3 % uploaded (17, "313b08106be17f4add787c6b0035948e")
+0699.795 (0) The time we have been running (699.8) is approaching the resumption interval (728) - increasing resumption interval to 730
+0699.808 (0) S3 chunked upload: 22.5 % uploaded (18, "28a9dde5a12a56eb2a801a431e4d2c6e")
+0703.018 (0) The time we have been running (703) is approaching the resumption interval (730) - increasing resumption interval to 733
+0703.029 (0) S3 chunked upload: 23.8 % uploaded (19, "fc9728ee416073d1bd6df836e2020354")
+0704.169 (0) The time we have been running (704.2) is approaching the resumption interval (733) - increasing resumption interval to 735
+0704.179 (0) S3 chunked upload: 25 % uploaded (20, "202b9b3d92eb3f56e6a6f3619ccdca67")
+0705.298 (0) The time we have been running (705.3) is approaching the resumption interval (735) - increasing resumption interval to 736
+0705.311 (0) S3 chunked upload: 26.3 % uploaded (21, "1c0718f7f712e298661dea426570e56b")
+0706.390 (0) The time we have been running (706.4) is approaching the resumption interval (736) - increasing resumption interval to 737
+0706.400 (0) S3 chunked upload: 27.5 % uploaded (22, "50cb59f05a2ad6c058699baaa93f9747")
+0707.519 (0) The time we have been running (707.5) is approaching the resumption interval (737) - increasing resumption interval to 738
+0707.531 (0) S3 chunked upload: 28.8 % uploaded (23, "3c8a6f3422678102546f44f1dbbaf86f")
+0708.665 (0) The time we have been running (708.6) is approaching the resumption interval (738) - increasing resumption interval to 739
+0708.676 (0) S3 chunked upload: 30 % uploaded (24, "499fec63e6f1941610fadb733ede5b32")
+0709.761 (0) The time we have been running (709.7) is approaching the resumption interval (739) - increasing resumption interval to 740
+0709.776 (0) S3 chunked upload: 31.3 % uploaded (25, "4e046d31cc4bfd0be9140360a0b5be99")
+0711.477 (0) The time we have been running (711.5) is approaching the resumption interval (740) - increasing resumption interval to 742
+0711.491 (0) S3 chunked upload: 32.5 % uploaded (26, "35f6dc3551b0263f82acc0b914f3d326")
+0713.284 (0) The time we have been running (713.1) is approaching the resumption interval (742) - increasing resumption interval to 744
+0713.304 (0) S3 chunked upload: 33.8 % uploaded (27, "098ab6f0912c9d60a10fb6039992032e")
+0714.488 (0) The time we have been running (714.5) is approaching the resumption interval (744) - increasing resumption interval to 745
+0714.497 (0) S3 chunked upload: 35 % uploaded (28, "454c8133efe648cf5d2c12f0791711a3")
+0715.593 (0) The time we have been running (715.6) is approaching the resumption interval (745) - increasing resumption interval to 746
+0715.613 (0) S3 chunked upload: 36.3 % uploaded (29, "77ecd22964699911edb3c97a250b2074")
+0716.668 (0) The time we have been running (716.6) is approaching the resumption interval (746) - increasing resumption interval to 747
+0716.680 (0) S3 chunked upload: 37.5 % uploaded (30, "ae02675666630ab0e2bc1da667d18533")
+0717.747 (0) The time we have been running (717.7) is approaching the resumption interval (747) - increasing resumption interval to 748
+0717.760 (0) S3 chunked upload: 38.8 % uploaded (31, "cef5e9cd39f8996a838b8854b2b1fa3f")
+0718.886 (0) The time we have been running (718.9) is approaching the resumption interval (748) - increasing resumption interval to 749
+0718.899 (0) S3 chunked upload: 40 % uploaded (32, "c93f2751ab48b947a60640d6ed6818f7")
+0719.990 (0) The time we have been running (720) is approaching the resumption interval (749) - increasing resumption interval to 750
+0720.004 (0) S3 chunked upload: 41.3 % uploaded (33, "49ae5a04a65d7ad4637136dcc78ff42c")
+0721.068 (0) The time we have been running (721.1) is approaching the resumption interval (750) - increasing resumption interval to 752
+0721.081 (0) S3 chunked upload: 42.5 % uploaded (34, "fe05de3898f2e42aa33cc61f2df02141")
+0722.224 (0) The time we have been running (722.1) is approaching the resumption interval (752) - increasing resumption interval to 753
+0722.238 (0) S3 chunked upload: 43.8 % uploaded (35, "a52db73b5b931f38a164531cc80da8c6")
+0723.350 (0) The time we have been running (723.3) is approaching the resumption interval (753) - increasing resumption interval to 754
+0723.404 (0) S3 chunked upload: 45 % uploaded (36, "caed4c999d3dfa49a2ac692c2e896aa6")
+0725.616 (0) The time we have been running (725.6) is approaching the resumption interval (754) - increasing resumption interval to 756
+0725.627 (0) S3 chunked upload: 46.3 % uploaded (37, "6c4335597b7786dab69a964a1179dc01")
+0726.779 (0) The time we have been running (726.8) is approaching the resumption interval (756) - increasing resumption interval to 757
+0726.794 (0) S3 chunked upload: 47.5 % uploaded (38, "dab3b52a71c543a9f9a1ad39ab0ffe65")
+0727.886 (0) The time we have been running (727.9) is approaching the resumption interval (757) - increasing resumption interval to 758
+0727.899 (0) S3 chunked upload: 48.8 % uploaded (39, "76eca617ea6e395b1dd35fe12342aa89")
+0729.023 (0) The time we have been running (729) is approaching the resumption interval (758) - increasing resumption interval to 759
+0729.035 (0) S3 chunked upload: 50 % uploaded (40, "7f44ca9e864e1a3fda66f6b50d7126d8")
+0730.189 (0) The time we have been running (730.2) is approaching the resumption interval (759) - increasing resumption interval to 761
+0730.204 (0) S3 chunked upload: 51.3 % uploaded (41, "1a15b6f7394f87e94896f23dd4f8d8e7")
+0731.317 (0) The time we have been running (731.3) is approaching the resumption interval (761) - increasing resumption interval to 762
+0731.330 (0) S3 chunked upload: 52.5 % uploaded (42, "95a7716c344e62873431ab00b6244be3")
+0732.427 (0) The time we have been running (732.4) is approaching the resumption interval (762) - increasing resumption interval to 763
+0732.442 (0) S3 chunked upload: 53.8 % uploaded (43, "4abad18c9bfee5d946efbe39557609d1")
+0733.521 (0) The time we have been running (733.5) is approaching the resumption interval (763) - increasing resumption interval to 764
+0733.536 (0) S3 chunked upload: 55 % uploaded (44, "c09a495815f670117b4370ae2de25bb0")
+0735.537 (0) The time we have been running (735.5) is approaching the resumption interval (764) - increasing resumption interval to 766
+0735.551 (0) S3 chunked upload: 56.3 % uploaded (45, "faa898429663442e59b05a6c07156ab7")
+0736.717 (0) The time we have been running (736.7) is approaching the resumption interval (766) - increasing resumption interval to 767
+0736.727 (0) S3 chunked upload: 57.5 % uploaded (46, "f0cf08b7ca3593ba49477bc4acd4acc1")
+0737.863 (0) The time we have been running (737.8) is approaching the resumption interval (767) - increasing resumption interval to 768
+0737.876 (0) S3 chunked upload: 58.8 % uploaded (47, "387db0637b9be61590dde2f43d8eeeb5")
+0738.966 (0) The time we have been running (738.9) is approaching the resumption interval (768) - increasing resumption interval to 769
+0738.976 (0) S3 chunked upload: 60 % uploaded (48, "027f4e6fb374385e0486cb61af5932dc")
+0740.088 (0) The time we have been running (740.1) is approaching the resumption interval (769) - increasing resumption interval to 771
+0740.098 (0) S3 chunked upload: 61.3 % uploaded (49, "555c4e0d905d40c0887b9b897aa1ff5a")
+0741.269 (0) The time we have been running (741.3) is approaching the resumption interval (771) - increasing resumption interval to 772
+0741.283 (0) S3 chunked upload: 62.5 % uploaded (50, "0cd452b82120c7abb2725937503301be")
+0742.429 (0) The time we have been running (742.4) is approaching the resumption interval (772) - increasing resumption interval to 773
+0742.444 (0) S3 chunked upload: 63.8 % uploaded (51, "3a4317e30df51bb65459dc016c1c8ada")
+0743.533 (0) The time we have been running (743.5) is approaching the resumption interval (773) - increasing resumption interval to 774
+0743.548 (0) S3 chunked upload: 65 % uploaded (52, "8cd4cc963ee1210e9a1afbff5216e2e4")
+0744.627 (0) The time we have been running (744.6) is approaching the resumption interval (774) - increasing resumption interval to 775
+0744.638 (0) S3 chunked upload: 66.3 % uploaded (53, "009c48f364f2ace936eb2964d7e7252d")
+0745.881 (0) The time we have been running (745.9) is approaching the resumption interval (775) - increasing resumption interval to 776
+0745.893 (0) S3 chunked upload: 67.5 % uploaded (54, "489a982a4fce3b634f10e30b79ef23c1")
+0747.248 (0) The time we have been running (747.2) is approaching the resumption interval (776) - increasing resumption interval to 778
+0747.258 (0) S3 chunked upload: 68.8 % uploaded (55, "ed130561a0b1b10cea1641f67b471434")
+0748.303 (0) The time we have been running (748.3) is approaching the resumption interval (778) - increasing resumption interval to 779
+0748.318 (0) S3 chunked upload: 70 % uploaded (56, "9db520b286bd63c288776ff5027535db")
+0749.479 (0) The time we have been running (749.4) is approaching the resumption interval (779) - increasing resumption interval to 780
+0749.495 (0) S3 chunked upload: 71.3 % uploaded (57, "8218102af6d52015b1a13794d66f5611")
+0750.591 (0) The time we have been running (750.6) is approaching the resumption interval (780) - increasing resumption interval to 781
+0750.606 (0) S3 chunked upload: 72.5 % uploaded (58, "4f7aecf6a5a4a9318d27eacf3f439a61")
+0751.686 (0) The time we have been running (751.7) is approaching the resumption interval (781) - increasing resumption interval to 782
+0751.717 (0) S3 chunked upload: 73.8 % uploaded (59, "ee7287f7ba1a1ba25eb74bb631a5f1d8")
+0752.837 (0) The time we have been running (752.8) is approaching the resumption interval (782) - increasing resumption interval to 783
+0752.853 (0) S3 chunked upload: 75 % uploaded (60, "c35d7144b64575234b71063865271091")
+0753.907 (0) The time we have been running (753.9) is approaching the resumption interval (783) - increasing resumption interval to 784
+0753.921 (0) S3 chunked upload: 76.3 % uploaded (61, "1d0b855f7ed3deac9d584fe58780e71a")
+0755.042 (0) The time we have been running (755) is approaching the resumption interval (784) - increasing resumption interval to 786
+0755.132 (0) S3 chunked upload: 77.5 % uploaded (62, "8365a14b8e04e7bc68364d368209dba9")
+0756.287 (0) The time we have been running (756.3) is approaching the resumption interval (786) - increasing resumption interval to 787
+0756.308 (0) S3 chunked upload: 78.8 % uploaded (63, "975503f3e7dfc63f8985b8c916f260ea")
+0757.378 (0) The time we have been running (757.4) is approaching the resumption interval (787) - increasing resumption interval to 788
+0757.389 (0) S3 chunked upload: 80 % uploaded (64, "cc10f4c8dc9bf2073794197e721074e9")
+0758.448 (0) The time we have been running (758.4) is approaching the resumption interval (788) - increasing resumption interval to 789
+0758.460 (0) S3 chunked upload: 81.3 % uploaded (65, "cbb911511149e0ed4b5031593751db1b")
+0759.640 (0) The time we have been running (759.6) is approaching the resumption interval (789) - increasing resumption interval to 790
+0759.653 (0) S3 chunked upload: 82.5 % uploaded (66, "be0fd198ca9bbb5b245427313210dbab")
+0760.755 (0) The time we have been running (760.7) is approaching the resumption interval (790) - increasing resumption interval to 791
+0760.771 (0) S3 chunked upload: 83.8 % uploaded (67, "43eab92b956bdb196162f109eb51f5e6")
+0761.869 (0) The time we have been running (761.9) is approaching the resumption interval (791) - increasing resumption interval to 792
+0761.880 (0) S3 chunked upload: 85 % uploaded (68, "03bfb9882c60a0bad22ef7156e183e29")
+0763.060 (0) The time we have been running (763) is approaching the resumption interval (792) - increasing resumption interval to 794
+0763.076 (0) S3 chunked upload: 86.3 % uploaded (69, "4377f0107dd7651f2341f32339cc2fd6")
+0764.205 (0) The time we have been running (764.2) is approaching the resumption interval (794) - increasing resumption interval to 795
+0764.220 (0) S3 chunked upload: 87.5 % uploaded (70, "7d6d818eda60e08363c99b0adfd6eeb6")
+0765.305 (0) The time we have been running (765.3) is approaching the resumption interval (795) - increasing resumption interval to 796
+0765.316 (0) S3 chunked upload: 88.8 % uploaded (71, "03d069b4f02f3610fef4cb9cbb584bc5")
+0766.507 (0) The time we have been running (766.5) is approaching the resumption interval (796) - increasing resumption interval to 797
+0766.525 (0) S3 chunked upload: 90 % uploaded (72, "8bfac6c9fbe75fbf2bb1e751b914e477")
+0767.654 (0) The time we have been running (767.6) is approaching the resumption interval (797) - increasing resumption interval to 798
+0767.668 (0) S3 chunked upload: 91.3 % uploaded (73, "5fcd0e52d3ff425d9b8082c1168a2958")
+0768.822 (0) The time we have been running (768.8) is approaching the resumption interval (798) - increasing resumption interval to 799
+0768.836 (0) S3 chunked upload: 92.5 % uploaded (74, "6f78a87ed4623eddb225f12cb4687c7c")
+0769.965 (0) The time we have been running (769.9) is approaching the resumption interval (799) - increasing resumption interval to 800
+0769.979 (0) S3 chunked upload: 93.8 % uploaded (75, "5d2d4d04b705cb427ec06fefd86cca26")
+0771.043 (0) The time we have been running (771) is approaching the resumption interval (800) - increasing resumption interval to 802
+0771.057 (0) S3 chunked upload: 95 % uploaded (76, "5f400d2bec96817ddce763340d09a492")
+0772.118 (0) The time we have been running (772.1) is approaching the resumption interval (802) - increasing resumption interval to 803
+0772.133 (0) S3 chunked upload: 96.3 % uploaded (77, "5a7c66281e9220b4fbacac9266112338")
+0773.510 (0) The time we have been running (773.5) is approaching the resumption interval (803) - increasing resumption interval to 804
+0773.524 (0) S3 chunked upload: 97.5 % uploaded (78, "b5080912df21042cce255efd3118d31b")
+0774.634 (0) The time we have been running (774.6) is approaching the resumption interval (804) - increasing resumption interval to 805
+0774.647 (0) S3 chunked upload: 98.8 % uploaded (79, "2c281f7e1e03b1b5d401d5cb1850f2bc")
+0775.469 (0) The time we have been running (775.5) is approaching the resumption interval (805) - increasing resumption interval to 806
+0775.482 (0) S3 chunked upload: 100 % uploaded (80, "80314b23a68cff4c0b43270cfadaacf1")
+0775.503 (0) S3 upload: all chunks uploaded; will now instruct S3 to re-assemble
+0775.653 (0) S3 upload (others0): re-assembly succeeded
+0775.668 (0) Recording as successfully uploaded: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip (7fa57eceb31370219f821f50d1efb420)
+0775.877 (0) Deleting local file: backup_2017-02-06-0701_GolfReview_3b358ebda362-others.zip: OK
+0775.913 (0) S3 upload (): backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip (chunks: 69) -> s3://golfreviewupdraft/backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip
+0775.956 (0) S3 chunked upload: got multipart ID: 7Kzg9FdAdD6RkC_IeBlOYSWOFws5LD.nxryrASXrIiFz9aeJyLVvWsaCK160LRHJp5_85wu6Jsr6IRXjzPCs6vKsDRNyQzjwqBwbXxabr4l_bmj_xf7Yy9SCHblwkXlM
+0777.186 (0) The time we have been running (777.1) is approaching the resumption interval (806) - increasing resumption interval to 808
+0777.199 (0) S3 chunked upload: 1.4 % uploaded (1, "f1f82ce1de0415d79335162ee85541f6")
+0778.224 (0) The time we have been running (778.2) is approaching the resumption interval (808) - increasing resumption interval to 809
+0778.236 (0) S3 chunked upload: 2.9 % uploaded (2, "88c6a54a4126fa11084dfae8f0b40dc1")
+0779.389 (0) The time we have been running (779.4) is approaching the resumption interval (809) - increasing resumption interval to 810
+0779.403 (0) S3 chunked upload: 4.3 % uploaded (3, "a922763a1d1358e6272f88c36664ec67")
+0780.524 (0) The time we have been running (780.5) is approaching the resumption interval (810) - increasing resumption interval to 811
+0780.535 (0) S3 chunked upload: 5.8 % uploaded (4, "44fec2ed7be8d5b086cdf3f0b5874256")
+0781.601 (0) The time we have been running (781.6) is approaching the resumption interval (811) - increasing resumption interval to 812
+0781.622 (0) S3 chunked upload: 7.2 % uploaded (5, "1629f4e111dfaa054e5c6f0aff50996d")
+0782.738 (0) The time we have been running (782.7) is approaching the resumption interval (812) - increasing resumption interval to 813
+0782.754 (0) S3 chunked upload: 8.7 % uploaded (6, "4268a1299e83ff70a873fee7438f38af")
+0783.918 (0) The time we have been running (783.9) is approaching the resumption interval (813) - increasing resumption interval to 814
+0783.933 (0) S3 chunked upload: 10.1 % uploaded (7, "446b9dd365445efb90bcac7571f91fee")
+0785.183 (0) The time we have been running (785.2) is approaching the resumption interval (814) - increasing resumption interval to 816
+0785.195 (0) S3 chunked upload: 11.6 % uploaded (8, "9c4af7d3a6eb9956e465fff1a3577b7d")
+0786.749 (0) The time we have been running (786.7) is approaching the resumption interval (816) - increasing resumption interval to 817
+0786.765 (0) S3 chunked upload: 13 % uploaded (9, "aa70a56bd6cd9b8392a269b35d001b3d")
+0788.590 (0) The time we have been running (788.5) is approaching the resumption interval (817) - increasing resumption interval to 819
+0788.604 (0) S3 chunked upload: 14.5 % uploaded (10, "a5156396ec6992a1ba1dc451e64ba225")
+0789.828 (0) The time we have been running (789.8) is approaching the resumption interval (819) - increasing resumption interval to 820
+0789.841 (0) S3 chunked upload: 15.9 % uploaded (11, "6a951c9647b9924f3ef5b313b1e37cdb")
+0790.921 (0) The time we have been running (790.9) is approaching the resumption interval (820) - increasing resumption interval to 821
+0790.939 (0) S3 chunked upload: 17.4 % uploaded (12, "835334d53fda62a8666d9e405b0a907e")
+0792.247 (0) The time we have been running (792.2) is approaching the resumption interval (821) - increasing resumption interval to 823
+0792.261 (0) S3 chunked upload: 18.8 % uploaded (13, "7fc28094059361389f7029f5f57286db")
+0794.193 (0) The time we have been running (794.2) is approaching the resumption interval (823) - increasing resumption interval to 825
+0794.209 (0) S3 chunked upload: 20.3 % uploaded (14, "198b95b7c9c3f3c3df560c6b5945f996")
+0795.410 (0) The time we have been running (795.4) is approaching the resumption interval (825) - increasing resumption interval to 826
+0795.426 (0) S3 chunked upload: 21.7 % uploaded (15, "3b4d8290977dfb55b5d42e68a9fa5993")
+0796.623 (0) The time we have been running (796.6) is approaching the resumption interval (826) - increasing resumption interval to 827
+0796.637 (0) S3 chunked upload: 23.2 % uploaded (16, "bdcb2677df06c7c870f7d6fca87a50fd")
+0797.702 (0) The time we have been running (797.7) is approaching the resumption interval (827) - increasing resumption interval to 828
+0797.712 (0) S3 chunked upload: 24.6 % uploaded (17, "4c8a7371d9f96be7352d2dcf1777e2c4")
+0798.926 (0) The time we have been running (798.8) is approaching the resumption interval (828) - increasing resumption interval to 829
+0798.966 (0) S3 chunked upload: 26.1 % uploaded (18, "47b22f5f34ca41ce5d81f95bc3670861")
+0800.161 (0) The time we have been running (800.1) is approaching the resumption interval (829) - increasing resumption interval to 831
+0800.182 (0) S3 chunked upload: 27.5 % uploaded (19, "6569b852a70b64204a61113b1121d946")
+0801.271 (0) The time we have been running (801.2) is approaching the resumption interval (831) - increasing resumption interval to 832
+0801.285 (0) S3 chunked upload: 29 % uploaded (20, "00db785123cc2087879abb8a9cd4f2d3")
+0802.391 (0) The time we have been running (802.4) is approaching the resumption interval (832) - increasing resumption interval to 833
+0802.404 (0) S3 chunked upload: 30.4 % uploaded (21, "40d94abec2a8670710adb23810a9c453")
+0803.553 (0) The time we have been running (803.5) is approaching the resumption interval (833) - increasing resumption interval to 834
+0803.567 (0) S3 chunked upload: 31.9 % uploaded (22, "5d2a427ca61fd2010238e09b29307a5b")
+0804.756 (0) The time we have been running (804.7) is approaching the resumption interval (834) - increasing resumption interval to 835
+0804.771 (0) S3 chunked upload: 33.3 % uploaded (23, "527db475a8062aea80f99b891c4ce1be")
+0805.907 (0) The time we have been running (805.9) is approaching the resumption interval (835) - increasing resumption interval to 836
+0805.918 (0) S3 chunked upload: 34.8 % uploaded (24, "686b7b1463a0ac4d8ff665a0950ac9ab")
+0806.971 (0) The time we have been running (806.9) is approaching the resumption interval (836) - increasing resumption interval to 837
+0806.981 (0) S3 chunked upload: 36.2 % uploaded (25, "be2b077fcd7cad23188f686ceb659d8d")
+0808.187 (0) The time we have been running (808.2) is approaching the resumption interval (837) - increasing resumption interval to 839
+0808.199 (0) S3 chunked upload: 37.7 % uploaded (26, "0092a92a3aeb25272d8fa0eb576adde8")
+0809.227 (0) The time we have been running (809.2) is approaching the resumption interval (839) - increasing resumption interval to 840
+0809.247 (0) S3 chunked upload: 39.1 % uploaded (27, "84915f1e4e79a7cd2d731b185b0c2e7f")
+0810.471 (0) The time we have been running (810.5) is approaching the resumption interval (840) - increasing resumption interval to 841
+0810.488 (0) S3 chunked upload: 40.6 % uploaded (28, "b68b843ec3ac04ebd361e0397c838be9")
+0811.513 (0) The time we have been running (811.5) is approaching the resumption interval (841) - increasing resumption interval to 842
+0811.534 (0) S3 chunked upload: 42 % uploaded (29, "c4fbfd7e923d0409ef005b2aac8c8852")
+0812.487 (0) The time we have been running (812.5) is approaching the resumption interval (842) - increasing resumption interval to 843
+0812.503 (0) S3 chunked upload: 43.5 % uploaded (30, "15e4054f97812c9b972ea4d56fe50e79")
+0813.660 (0) The time we have been running (813.6) is approaching the resumption interval (843) - increasing resumption interval to 844
+0813.672 (0) S3 chunked upload: 44.9 % uploaded (31, "3f2bc62ad870b1deb594fb8d3a59c724")
+0814.709 (0) The time we have been running (814.7) is approaching the resumption interval (844) - increasing resumption interval to 845
+0814.722 (0) S3 chunked upload: 46.4 % uploaded (32, "160f34f6672d53f6e85dbd82aa41b1f9")
+0815.958 (0) The time we have been running (815.9) is approaching the resumption interval (845) - increasing resumption interval to 846
+0815.969 (0) S3 chunked upload: 47.8 % uploaded (33, "3d1fd6a1a2a1a8373aeb59d1359b6c09")
+0817.045 (0) The time we have been running (817) is approaching the resumption interval (846) - increasing resumption interval to 848
+0817.057 (0) S3 chunked upload: 49.3 % uploaded (34, "989057b773280bb74ba9bbf271efae52")
+0818.187 (0) The time we have been running (818.2) is approaching the resumption interval (848) - increasing resumption interval to 849
+0818.200 (0) S3 chunked upload: 50.7 % uploaded (35, "432952a919193a7717f84863e4d2e8f5")
+0819.338 (0) The time we have been running (819.3) is approaching the resumption interval (849) - increasing resumption interval to 850
+0819.363 (0) S3 chunked upload: 52.2 % uploaded (36, "b13b911adf0496fe6fa1744d35a6c5e1")
+0820.410 (0) The time we have been running (820.4) is approaching the resumption interval (850) - increasing resumption interval to 851
+0820.422 (0) S3 chunked upload: 53.6 % uploaded (37, "e9f41ffbe14020b40dd09f41ca835aea")
+0821.487 (0) The time we have been running (821.5) is approaching the resumption interval (851) - increasing resumption interval to 852
+0821.502 (0) S3 chunked upload: 55.1 % uploaded (38, "ec29986a4719ce3f2afb9d0dffac4446")
+0822.500 (0) The time we have been running (822.5) is approaching the resumption interval (852) - increasing resumption interval to 853
+0822.513 (0) S3 chunked upload: 56.5 % uploaded (39, "d1626eef9cdd9c391e50c35422cee80c")
+0823.560 (0) The time we have been running (823.5) is approaching the resumption interval (853) - increasing resumption interval to 854
+0823.572 (0) S3 chunked upload: 58 % uploaded (40, "ca6e52e232bc0d7fe08d1754c79b8a5d")
+0824.764 (0) The time we have been running (824.7) is approaching the resumption interval (854) - increasing resumption interval to 855
+0824.775 (0) S3 chunked upload: 59.4 % uploaded (41, "91e215b0d1acc17263c5e297864ac866")
+0825.976 (0) The time we have been running (825.9) is approaching the resumption interval (855) - increasing resumption interval to 856
+0825.987 (0) S3 chunked upload: 60.9 % uploaded (42, "6d3f2b83d227a12484e12088f07f5794")
+0827.769 (0) The time we have been running (827.7) is approaching the resumption interval (856) - increasing resumption interval to 858
+0827.783 (0) S3 chunked upload: 62.3 % uploaded (43, "0d25cd8c23a932d977e27351e279aae0")
+0829.074 (0) The time we have been running (829.1) is approaching the resumption interval (858) - increasing resumption interval to 860
+0829.096 (0) S3 chunked upload: 63.8 % uploaded (44, "925a2ef12e4103061c2600907b04cc2e")
+0830.316 (0) The time we have been running (830.3) is approaching the resumption interval (860) - increasing resumption interval to 861
+0830.326 (0) S3 chunked upload: 65.2 % uploaded (45, "c1031c4b284b284e5f0dc5dd8120982a")
+0831.328 (0) The time we have been running (831.3) is approaching the resumption interval (861) - increasing resumption interval to 862
+0831.341 (0) S3 chunked upload: 66.7 % uploaded (46, "ec571c001f98c474bb7f21c8add208be")
+0832.397 (0) The time we have been running (832.4) is approaching the resumption interval (862) - increasing resumption interval to 863
+0832.414 (0) S3 chunked upload: 68.1 % uploaded (47, "196fbac551479570d408b250ff1f933c")
+0833.408 (0) The time we have been running (833.4) is approaching the resumption interval (863) - increasing resumption interval to 864
+0833.420 (0) S3 chunked upload: 69.6 % uploaded (48, "ebc59ce9dde80da860137e73ca4a413f")
+0834.477 (0) The time we have been running (834.5) is approaching the resumption interval (864) - increasing resumption interval to 865
+0834.495 (0) S3 chunked upload: 71 % uploaded (49, "a2954b1bfc845e5ff8ab5259db28845d")
+0835.598 (0) The time we have been running (835.6) is approaching the resumption interval (865) - increasing resumption interval to 866
+0835.610 (0) S3 chunked upload: 72.5 % uploaded (50, "8bc8fb8d602885c898359bce95f68be9")
+0836.584 (0) The time we have been running (836.6) is approaching the resumption interval (866) - increasing resumption interval to 867
+0836.596 (0) S3 chunked upload: 73.9 % uploaded (51, "a8430cd8f7e732b868f2c7dc22bf150f")
+0837.604 (0) The time we have been running (837.6) is approaching the resumption interval (867) - increasing resumption interval to 868
+0837.625 (0) S3 chunked upload: 75.4 % uploaded (52, "f74aa9eae741f6a6cc9d288519ab459d")
+0839.608 (0) The time we have been running (839.6) is approaching the resumption interval (868) - increasing resumption interval to 870
+0839.681 (0) S3 chunked upload: 76.8 % uploaded (53, "81c0282736ff7331652b5e4b0ec9c28f")
+0840.907 (0) The time we have been running (840.8) is approaching the resumption interval (870) - increasing resumption interval to 871
+0840.920 (0) S3 chunked upload: 78.3 % uploaded (54, "4c571b75a5478aa6368ea7ad7abf3471")
+0841.877 (0) The time we have been running (841.9) is approaching the resumption interval (871) - increasing resumption interval to 872
+0841.889 (0) S3 chunked upload: 79.7 % uploaded (55, "197a3e4bf6c4fc22e80bcf97169fb9a2")
+0843.056 (0) The time we have been running (843) is approaching the resumption interval (872) - increasing resumption interval to 874
+0843.068 (0) S3 chunked upload: 81.2 % uploaded (56, "c53c5f92e6a3cbaf0deb710cd3fab181")
+0844.152 (0) The time we have been running (844.1) is approaching the resumption interval (874) - increasing resumption interval to 875
+0844.169 (0) S3 chunked upload: 82.6 % uploaded (57, "a9a2997e2ed3ac262a11940d02d7ab61")
+0845.169 (0) The time we have been running (845.1) is approaching the resumption interval (875) - increasing resumption interval to 876
+0845.180 (0) S3 chunked upload: 84.1 % uploaded (58, "1117571416d041e060052379f3d58cac")
+0846.954 (0) The time we have been running (846.9) is approaching the resumption interval (876) - increasing resumption interval to 877
+0846.970 (0) S3 chunked upload: 85.5 % uploaded (59, "ff91b7710cfe5e1e59d4e87346aa3149")
+0848.002 (0) The time we have been running (848) is approaching the resumption interval (877) - increasing resumption interval to 878
+0848.030 (0) S3 chunked upload: 87 % uploaded (60, "6e4bffbf6830f562b8521631e19849da")
+0849.009 (0) The time we have been running (849) is approaching the resumption interval (878) - increasing resumption interval to 879
+0849.023 (0) S3 chunked upload: 88.4 % uploaded (61, "5fe727b3269cd3d673232aaacc9e3ccb")
+0850.028 (0) The time we have been running (850) is approaching the resumption interval (879) - increasing resumption interval to 880
+0850.068 (0) S3 chunked upload: 89.9 % uploaded (62, "4444d58a1713f750a40578f28f7a23b6")
+0851.146 (0) The time we have been running (851) is approaching the resumption interval (880) - increasing resumption interval to 882
+0851.168 (0) S3 chunked upload: 91.3 % uploaded (63, "fc682fa228d455bf712686493d546188")
+0852.193 (0) The time we have been running (852.2) is approaching the resumption interval (882) - increasing resumption interval to 883
+0852.208 (0) S3 chunked upload: 92.8 % uploaded (64, "48d79693d386e38e723b7315dbf0f76f")
+0853.230 (0) The time we have been running (853.2) is approaching the resumption interval (883) - increasing resumption interval to 884
+0853.246 (0) S3 chunked upload: 94.2 % uploaded (65, "c06f9175d4cc1d2ff509c351712a24c6")
+0854.287 (0) The time we have been running (854.3) is approaching the resumption interval (884) - increasing resumption interval to 885
+0854.298 (0) S3 chunked upload: 95.7 % uploaded (66, "54476e3b93057a2998f003d1d92f638b")
+0855.730 (0) The time we have been running (855.7) is approaching the resumption interval (885) - increasing resumption interval to 886
+0855.744 (0) S3 chunked upload: 97.1 % uploaded (67, "8b7401c67f3e4813a4316a8284253d33")
+0856.818 (0) The time we have been running (856.8) is approaching the resumption interval (886) - increasing resumption interval to 887
+0856.836 (0) S3 chunked upload: 98.6 % uploaded (68, "bde0f3283daddc5cdc7924e55edf78f0")
+0857.361 (0) The time we have been running (857.3) is approaching the resumption interval (887) - increasing resumption interval to 888
+0857.375 (0) S3 chunked upload: 100 % uploaded (69, "2289b54303000cc8587bfa1f17fd59b4")
+0857.555 (0) S3 upload: all chunks uploaded; will now instruct S3 to re-assemble
+0858.298 (0) S3 upload (others1): re-assembly succeeded
+0858.321 (0) Recording as successfully uploaded: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip (0feef71c96bf0e248e2e79ea742a7160)
+0858.954 (0) Deleting local file: backup_2017-02-06-0701_GolfReview_3b358ebda362-others2.zip: OK
+0858.965 (0) S3 upload (): backup_2017-02-06-0701_GolfReview_3b358ebda362-db.gz (chunks: 1) -> s3://golfreviewupdraft/backup_2017-02-06-0701_GolfReview_3b358ebda362-db.gz
+0859.089 (0) S3 regular upload: success
+0859.109 (0) Recording as successfully uploaded: backup_2017-02-06-0701_GolfReview_3b358ebda362-db.gz (236150f9932506705e040dc90b8c55a9)
+0859.162 (0) Deleting local file: backup_2017-02-06-0701_GolfReview_3b358ebda362-db.gz: OK
+0859.181 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=10, retain_db=10
+0859.189 (0) Number of backup sets in history: 6; groups (db): 1
+0859.194 (0) Examining (for databases) backup set with group_id=0, nonce=3b358ebda362, datestamp=1486364492 (Feb 06 2017 07:01:32)
+0859.198 (0) This backup set is the backup set just made, so will not be deleted.
+0859.203 (0) Examining (for databases) backup set with group_id=0, nonce=09bbea0ab4fc, datestamp=1480916702 (Dec 05 2016 05:45:02)
+0859.208 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0859.212 (0) Examining (for databases) backup set with group_id=0, nonce=9e4463623a18, datestamp=1478783819 (Nov 10 2016 13:16:59)
+0859.217 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0859.224 (0) Examining (for databases) backup set with group_id=0, nonce=afe6c086130b, datestamp=1478755244 (Nov 10 2016 05:20:44)
+0859.229 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0859.233 (0) Examining (for databases) backup set with group_id=0, nonce=a893f2ad020a, datestamp=1478496404 (Nov 07 2016 05:26:44)
+0859.238 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0859.243 (0) Examining (for databases) backup set with group_id=0, nonce=5f2f24563f86, datestamp=1478159537 (Nov 03 2016 07:52:17)
+0859.248 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0859.252 (0) Number of backup sets in history: 6; groups (files): 1
+0859.259 (0) Examining (for files) backup set with nonce=3b358ebda362, datestamp=1486364492 (Feb 06 2017 07:01:32)
+0859.264 (0) This backup set is the backup set just made, so will not be deleted.
+0859.269 (0) This backup set is the backup set just made, so will not be deleted.
+0859.270 (0) This backup set is the backup set just made, so will not be deleted.
+0859.271 (0) This backup set is the backup set just made, so will not be deleted.
+0859.272 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0859.276 (0) Examining (for files) backup set with nonce=09bbea0ab4fc, datestamp=1480916702 (Dec 05 2016 05:45:02)
+0859.281 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0859.285 (0) Examining (for files) backup set with nonce=9e4463623a18, datestamp=1478783819 (Nov 10 2016 13:16:59)
+0859.290 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0859.294 (0) Examining (for files) backup set with nonce=afe6c086130b, datestamp=1478755244 (Nov 10 2016 05:20:44)
+0859.299 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0859.306 (0) Examining (for files) backup set with nonce=a893f2ad020a, datestamp=1478496404 (Nov 07 2016 05:26:44)
+0859.311 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0859.316 (0) Examining (for files) backup set with nonce=5f2f24563f86, datestamp=1478159537 (Nov 03 2016 07:52:17)
+0859.321 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0859.326 (0) Retain: saving new backup history (sets now: 6) and finishing retain operation
+0859.357 (0) Resume backup (3b358ebda362, 0): finish run
+0859.369 (0) Decremented the semaphore (fd) by 1
+0859.379 (0) Semaphore (fd) unlocked
+0859.383 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0859.404 (0) No email will/can be sent - the user has not configured an email address.
+0859.409 (0) The backup apparently succeeded (with warnings) and is now complete

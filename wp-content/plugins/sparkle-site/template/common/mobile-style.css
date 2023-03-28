@@ -1,0 +1,105 @@
+/* header styles */
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+	#product-review .item-box {padding-bottom:0px;margin-bottom:20px;}
+	#featured-content { display:none !important; }
+	#mobiletable { display: block !important; }  /* show it on small screens */
+	#user-review-mobile { display: block !important; }  /* show it on small screens */
+	#product-overview-mobile { background-color: #f0efda; display: block !important;     padding-bottom: 10px;
+    margin-bottom: 6px;}
+	
+}
+
+@media screen  and (max-width: 601px) {
+body {
+    padding-top: 54px!important;
+}
+	#star-desktop{display:none !important;}
+#star-mobile{display:block !important;}
+	#desktoptable{ display:none !important;}
+	#user-review-desktop{ display:none !important;}
+}
+
+@media screen and (min-width: 601px) {
+	#star-desktop{display:block !important;}
+#star-mobile{display:none !important;}
+	#product-review .item-box {padding-bottom:0px;margin-bottom:20px;}
+	.product-overview { background-color:#f0efda; padding:10px; margin:15px 0; }
+	.product-share {	text-align:center; margin:0 auto 8px auto; }
+	.product-share div { float:left; padding:4px 10px 0 10px; height:26px; }
+	.product-share div a { color:#2961a4; font-weight:bold; }
+	.product-share .pp {margin-left:30px;}
+	.product-share .cc {padding-top:8px;height:22px;}
+	.product-share .sbg { background-color:#e6e9ec; border-right:1px solid #d6d9dc; border-left:1px solid #fff; text-align:center; }
+	.product-share .f { -moz-border-radius:5px 0 0 5px; -webkit-border-radius:5px 0 0 5px; border-left:none; }
+	.product-share .l { -moz-border-radius:0 5px 5px 0; -webkit-border-radius:0 5px 5px 0; border-right:none; }
+	.product-overview table { margin:0 auto; }
+	.product-overview table td img.product-image {  width:408px;height:270px; }
+	.product-ratings {	padding:0px 0;position:relative;}
+	.product-ratings p {line-height:1.5em;}
+	.product-ratings table { width:195px; }
+	.product-ratings .top-rate {	padding-left:10px; }
+	.product-ratings td {	text-align:center;	font-size:14px;	line-height:2em;padding:0 5px;font-weight:bold;	font-family:helvetica; }
+	.product-ratings td.s { font-size:11px;line-height:1.5em; }
+	.product-score-outer { /*border-left:1px solid #7dba57;*/ padding-left:10px; }
+	.product-score-box { width:134px; padding:9px 10px; background-color:#096f00; color:#fff; border-radius:10px; -moz-border-raidus:10px; -webkit-border-radius:10px; }
+	.product-score-box a {color:#fff;}
+	.product-score-inner { background-color:#fff; color:#27604d; padding:10px 0; }
+	.green {color:#0e7206;}
+
+	#product-rating-detail { display:none; position:absolute; z-index: 1; top:14px; left:200px; width:250px; }
+	#product-rating-detail-inner { padding:7px; -moz-box-shadow: 0 0 6px #000; -webkit-box-shadow: 0 0 6px #000; box-shadow: 0 0 6px #000; -moz-border-radius:6px; -webkit-border-radius:6px; border-radius:6px; background-color:#fff; width:200px; z-index:0; }
+	#product-rating-detail table {background-color:#fff;width:200px;}
+	#product-rating-detail table td {padding:9px 6px;background-color:#f6f5e9;font-size:13px;text-align:left;line-height:1.2em;}
+	#product-rating-detail table td.dr {background-color:#f0efda;font-size:11px;width:56px;}
+	#product-rating-detail table td p.r {font-size:22px;font-weight:bold;line-height:1em;}
+	#product-rating-detail table td span.green {font-size:18px;font-weight:bold;line-height:1em;}
+
+	.image-thumb-list li {display:inline;float:left;height:50px;}
+	.image-thumb-list li.left-arrow a { display:inline-block; width:12px; height:44px; background:url('images/thumb-left-arrow.png') top left no-repeat;	margin:5px 5px 0 3px; }
+	.image-thumb-list li.right-arrow a {display:inline-block;width:12px; height:44px; background:url('images/thumb-right-arrow.png') top left no-repeat;	margin:5px 0 0 5px; }
+	
+	#thumb-img-0 { -moz-box-shadow: 0 0 4px #444; -webkit-box-shadow: 0 0 4px #444; box-shadow: 0 0 4px #444; }
+	.image-thumb-list li.thumbs { /*width:210px;*/ overflow:hidden; height:50px; margin-top:3px; }
+	.image-thumbs { position:relative; }
+	.image-thumbs div { display:inline;/*padding:0 2px;*/ }
+	.image-thumbs div img { border:1px solid #ccc;margin-top:3px; }
+	
+	#product-overview-desktop{display: block !important;}	
+	#header{ display: block !important; } /* show it on small screens */	
+
+}
+
+@media screen and (max-width: 700px) {
+	#product-review .item-box {padding-bottom:0px;margin-bottom:20px;}
+	.col-sm-9,.col-sm-3 { padding-right:0px !important; padding-left:0px !important; }
+	.golf-club-list-nav ul li a:hover, .golf-club-list-nav ul li.sel a { color:black !important; background:none !important; }
+	.search-page-box { width:auto !important; }
+	#container{ width:100%!important; /* margin-top:30px;*/}
+	.row { display:none!important; }
+	.statemap { width:100%!important; }
+	.course-search { width:100%!important; }
+	.hotdeal-one .hot-deals-module td { width:100%!important; }
+}
+
+/* tables listing */
+
+.table > tbody > tr > td { vertical-align: middle; text-align: left; }
+/*.table td{ border-top:none !important; }*/
+.table tbody:hover  { background-color: #d3d3d3; }
+.table td { border-top:none; }
+
+/* course page */
+			
+#scoredetails { display: none; }
+
+@media only screen and (max-width: 600px) {
+	#product-review .item-box {padding-bottom:0px;margin-bottom:20px;}
+	#___plusone_0{ width:100% !important; }
+    /* For mobile phones: */
+	.scoredetails { width:100%!important }
+	.leftscore { width:100%!important }
+	/*.rightscore { width:20%!important }*/
+	.scoreleft {     width: 93% !important;margin-right: 0!important; }	
+	.scoredetailsinnerleft2 { font-size: 11px!important; margin-bottom: 10px! important; }
+}
